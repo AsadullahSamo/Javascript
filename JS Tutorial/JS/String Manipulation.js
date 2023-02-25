@@ -7,7 +7,7 @@ console.log("Length of Asad is "+str.length);
 //   2. charAt(arg)
 console.log("Char at 2 of Asad is "+str.charAt(2));        //  or console.log(str[2]);
 
-//   3. string substr(startIndex, endIndex);       // end index is excluded
+//   3. string substring(startIndex, endIndex);       // end index is excluded
     let line = "I am learning Javascript";
     console.log("Substring is " + line.substring(2, 10));
 
