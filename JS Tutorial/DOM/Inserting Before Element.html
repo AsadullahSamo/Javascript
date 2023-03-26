@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inserting Before Element </title>
+</head>
+<body>
+    
+
+    <ul id="list">
+        <li> list 1 </li>
+        <li> list 2 </li>
+        <li> list 3 </li>
+        <li> list 4 </li>
+    </ul>
+
+        <script>
+            let list1 = document.getElementById("list");         // Selects parent
+
+            let item = document.createElement("li");
+            item.textContent = "new list 5";
+
+            let pos = list1.firstElementChild;
+
+            list1.insertBefore(item, pos);         
+
+
+            let parent = document.body;
+
+            let elm = document.createElement("h2");
+            elm.textContent = "This is new element";
+
+            let list = document.getElementById("list");       
+
+            parent.insertBefore(elm, list);
+        </script>
+
+</body>
+</html>

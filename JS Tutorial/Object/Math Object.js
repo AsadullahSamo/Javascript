@@ -1,7 +1,7 @@
 console.log(Math.PI);
 console.log(Math.round(4.7));
-console.log(Math.ceil(4.1));
-console.log(Math.floor(4.1));
+console.log(Math.ceil(4.1));     // make 4.1 to 5
+console.log(Math.floor(4.1));    // make 4.1 to 4
 console.log(Math.trunc(4.1));      // removes decimal point
 console.log(Math.pow(2, 4));
 

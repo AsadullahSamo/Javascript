@@ -1,5 +1,5 @@
 // Ctrl+Shift+R after highlighting (shortcut for getters and setters)
-
+// Getters and setters are properties in JS. so don't call them like functions
 let person = {
     name: "Asad",
     age: 18,

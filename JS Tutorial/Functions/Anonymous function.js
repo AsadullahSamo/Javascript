@@ -15,7 +15,7 @@ show();
 // setTimeout(functionName, timeinMilliseconds)
 setTimeout(show, 3000);      // displays function after 3 seconds 
 
-// or to save memory copy entire anonymous function
+// or to save memory copy entire anonymous function into setTimeout as argument
 
 setTimeout(function(){       // and this is called function expression
     console.log("Hello, World");

@@ -15,4 +15,4 @@ console.log(option);           // true    // false
 
 let user;
 
-alert("As user is undefined so user ?? \"Asad\" print "+user ?? "Asad");    //  --> if user is undefined print Asad
+alert(user ?? "Asad");    //  --> if user is undefined print Asad

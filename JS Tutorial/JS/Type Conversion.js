@@ -20,7 +20,6 @@ console.log(e);
 // B. By functions
 // 1. String(arg)  --> Converts arg into String
 
-// 1. Boolean(arg)  --> Converts arg into Boolean
 
 let type = 4;
 console.log("New type is "+ typeof String(type));
@@ -34,7 +33,7 @@ console.log("New type is "+ typeof Number(type));
 // if true is converted to number it'll be converted into 1 and false into 0
 
 type = Number(true);
-console.log("1(true in number) + 5 = " + type + 5);
+console.log("1(true in number) + 5 = " + (type + 5));
 
 
 // 3. Boolean(arg)  --> 0 into false and everything else in true, in string, blank string("") is false and everything else is true

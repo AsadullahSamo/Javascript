@@ -28,7 +28,7 @@ console.log(student2.description());
 
 // Student.nationality = "Pakistan";  this is not a valid way to add property in constuctor
 // So, we use object prototype
-Student.prototype.nationality = nationality;
+Student.prototype.nationality = "Pakistan";
 
 
 

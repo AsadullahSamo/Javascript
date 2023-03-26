@@ -2,7 +2,7 @@ let str = "Asadullah Samo";
 console.log(`Hi, ${str}`);
 
 //   1. length()
-console.log("Length of Asad is "+str.length);
+console.log("Length of Asadullah Samo is "+str.length);
 
 //   2. charAt(arg)
 console.log("Char at 2 of Asad is "+str.charAt(2));        //  or console.log(str[2]);
@@ -13,7 +13,7 @@ console.log("Char at 2 of Asad is "+str.charAt(2));        //  or console.log(st
 
     // 4. indeoxOf(arg) OR indexOf(arg, indextoSearchFrom)      --> if string is not found, it'll return -1
     // and lastIndexOf(arg)
-    let ind = line.lastIndexOf("am");
+    let ind = line.lastIndexOf("a");
     console.log("Last index of am is " +ind);
 
     ind = line.indexOf("Javascript");

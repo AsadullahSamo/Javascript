@@ -23,7 +23,7 @@ console.log("Age of person is " + person['age']);
 console.log(person);
 console.log("As address is not property of person so I am giving "+person.address);      // As address is not property of person, output will be undefined
 
-person.rollNumber = "xyz";     // now rollnumber is also property of person
+person.rollNumber = "xyz";     // now rollnumber is also property of person now
 console.log("Roll number of person is " + person.rollNumber);
 console.log(person);
 

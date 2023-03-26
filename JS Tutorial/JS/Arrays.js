@@ -43,12 +43,13 @@ console.log(books);
 
 
 // 5. indexOf(arg)      --> Return index of element 
-console.log("Index of PostgreSQL is " + books.indexOf("OOP in C++"));
+console.log("Index of PostgreSQL is " + books.indexOf("PostgreSQL"));
 
 
 //  6. Array.isArray()    --> To check whether var is variable or array
 let word = "Hi";
 console.log("Word hi is array? " + Array.isArray(word));
+console.log("books is array? " + Array.isArray(books));
 
 
 //  7. split(param)   --> If that param is found split string into substr and store it in array
