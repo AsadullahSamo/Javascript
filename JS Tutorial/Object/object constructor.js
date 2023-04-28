@@ -34,3 +34,5 @@ Student.prototype.nationality = "Pakistan";
 
 let student3 = new Student("Awais", 14, "GTA V", "abc");
 console.log(student3.nationality);
+console.log(student3);
+console.log(student2.nationality);

@@ -33,7 +33,7 @@ console.log(books);
 books.unshift("Sams Teach Yourself Java");
 console.log(books);
 
-//    4. splice(startingIndex, numOfElementsToRemove)
+// //    4. splice(startingIndex, numOfElementsToRemove)
 books.splice(2, 1);                // means remove 1 element from index 2 (index 2 element will be removed)
 console.log(books);
 

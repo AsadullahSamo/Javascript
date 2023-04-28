@@ -19,4 +19,4 @@ setTimeout(show, 3000);      // displays function after 3 seconds
 
 setTimeout(function(){       // and this is called function expression
     console.log("Hello, World");
-},  3000);      // displays function after 3 seconds 
+},  4000);      // displays function after 3 seconds 

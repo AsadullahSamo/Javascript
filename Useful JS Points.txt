@@ -1,0 +1,1 @@
+this.classList.toggle('active')       // adds active class to an element, and if already added, remove it. Useful for making FAQs

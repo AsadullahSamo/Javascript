@@ -18,7 +18,7 @@ function table(i, n){
 
 // Arguments Object:  same as Variable Arguments in Java
 
-// even if add() has no params by default arguments is array which store arguments passed by function add()
+// even if add() has no params, By default arguments is array which store arguments passed by function add()
 
 function showArgumentsArray(){
     console.log(arguments);

@@ -50,7 +50,7 @@ for(i=0; i<collectionOfPs.length; i++){
 // Syntax:       elm.style.property = '';
 // eg.  elm.style.fontSize = '2rem'
 
-elm.style.color = 'red';
+element.style.color = 'red';
 
 
 // 2. Modify atrributes
