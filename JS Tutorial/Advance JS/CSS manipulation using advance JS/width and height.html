@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Width and Height </title>
+
+    <style>
+        .color{
+            background-color: yellowgreen;
+            color: red;
+        }
+        .dim{
+            border: 1px solid red;
+            padding: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!--
+         Finding width and height of an element 
+    2 Types of height and width
+    1. Offset:      Here border is also included
+    1. Client:      border is not included 
+    -->
+
+    <div id="box" class="color dim">
+        <p> This is dummy text </p>
+    </div>
+
+
+                    <!-- Javascript -->
+    <script>
+       
+       // Calculate height and width either by
+       // 1. getComputedStyle()
+        let box = document.getElementById("box");
+        let css = getComputedStyle(box);
+        console.log("Width of box is: "+css.width);
+        console.log("Height of box is: "+css.height);
+
+      // 2. selector.offsetWidth, selector.offsetHeight
+        let width = box.offsetWidth;
+        let height = box.offsetHeight;
+        console.log("\n");
+        console.log("Offset Height of box: "+height);
+        console.log("Offset Width of box: "+width);
+
+        let clientHeight = box.clientHeight;
+        let clientWidth = box.clientWidth;
+        console.log("\n");
+        console.log("Client Height of box: "+clientHeight);
+        console.log("Client Width of box: "+clientWidth);
+    </script>
+
+</body>
+</html>

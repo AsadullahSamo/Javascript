@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Input Events </title>
+</head>
+<body>
+    
+
+    <form>
+        <input type="text" name="myInput" id="myInput">
+    </form>
+
+                    <!-- Javascript -->
+    <script>
+        
+        let x = document.getElementById("myInput");
+
+        // 1. focus
+        x.addEventListener("focus", function(){
+            x.style.background = 'yellow';
+        });
+
+        // 2. blur
+        x.addEventListener("blur", function(){
+            x.style.background = 'blue';
+        });
+
+        // 3. change   --> Detects change in input field
+        x.addEventListener("change", function(){    
+            console.log(this.value);
+        });
+
+        // 4. input  --> Detects change everytime any key is pressed
+        x.addEventListener("input", function(){    
+            console.log(this.value);
+        });
+
+    </script>
+
+    
+</body>
+</html>

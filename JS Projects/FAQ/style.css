@@ -1,3 +1,12 @@
+@keyframes abc {
+    from {
+        height: 160px;
+    }
+     to {
+        height: 0;
+     }
+}
+
 *{
     box-sizing: border-box;
 }
@@ -46,16 +55,15 @@ body{
 
 /* Javascript code after content class is added to any question*/
 .active .answer{
-    height: 160px;
-    transition: 0.5s;
+    height: 290px;
+    transition: 0.5s height;
 }
 
-/* .active .question{
+.active .question{
     transition: 0.5s height;
-} */
+}
 
 .active .question::after{
     content: "-";
-    height: 0;
     transition: 0.5s height;
 }

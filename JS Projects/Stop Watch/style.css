@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-image: url('img/Rolls\ Royce.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: white;
+    width: 50%;
+    height: 20%;
+    left: 30vw;
+    position: absolute;
+    top: 30vh;
+    border-radius: 25px;
+}
+
+.fa-play, .fa-redo{
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+    background-color: green;
+    position: relative;
+    margin-right: 8px;
+    left: 43%;
+    top: 17%;
+    cursor: pointer;
+}
+
+.fa-redo{
+    background-color: red;
+}
+
+.timer{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}

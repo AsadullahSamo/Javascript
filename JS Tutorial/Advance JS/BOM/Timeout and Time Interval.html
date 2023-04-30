@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Timeout and Time Interval </title>
+</head>
+<body>
+    
+
+    <button id="btn"> Clear Interval </button>
+                    <!-- Javascript -->
+    <script>
+
+        // 1sec = 1000ms      
+        // 1. setTimeout(function, delay);       --> It returns an id, which we can store in variable to close later using clearTimeout(id);
+        // let timeoutId = setTimeout(function(){      
+        //     alert("Please subscribe!");  // Display this alert after 3 secs
+        // }, 2000);
+
+        // clearTimeout(timeoutId);       If uncomment, timeout will not be executed
+        
+        // 2. setInterval(function, milliseconds);
+        let intervalId = setInterval(function(){
+            console.log("hi!");  // Print this in console after every 3 secs
+        }, 2000);
+
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            clearInterval(intervalId);
+        })
+        
+    </script>
+
+
+</body>
+</html>

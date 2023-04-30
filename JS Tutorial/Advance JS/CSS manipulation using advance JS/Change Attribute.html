@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Change Attribute </title>
+</head>
+<body>
+    
+    <button id="btn"> Send </button>
+
+
+
+
+                <!-- Javascript -->
+    <script>
+        
+        
+        // 1. setAttribute
+            // Syntax:
+            // setAttribute('attrb', 'value');
+        let btn = document.getElementById("btn");
+        btn.setAttribute('class', 'btn-class');
+        
+        // 2. getAttribute
+            // Syntax:
+            // getAttribute('value');
+        let val = btn.getAttribute('class');
+        console.log(val);
+
+        // 3. removeAttribute
+            // Syntax:
+            // removeAttribute('value');
+        btn.removeAttribute('class');
+        
+        // 4. hasAttribute
+            // Syntax:
+            // hasAttribute('value');
+        let attrbCheck = btn.hasAttribute('class');
+        console.log(attrbCheck); 
+
+
+
+    </script>
+
+
+</body>
+</html>

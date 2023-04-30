@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS classes </title>
+    
+    <style>
+        .color{
+            background-color: yellowgreen;
+            color: red;
+        }
+        .dim{
+            border: 1px solid red;
+            padding: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    
+      <!-- Changing style of CSS through classes -->
+      <div id="box" class="color">
+        <p> This is dummy text </p>
+      </div>
+
+
+                    <!-- Javascript -->
+    <script>
+        let box = document.getElementById("box");
+        
+        // Set class
+        box.className += " dim"      // Add new class
+        box.classList.add("abc", "def")
+        
+        // box.setAttribute('class', 'btn');        // But this will override all classes
+
+        //    Get class
+        console.log(box.className);
+        console.log(box.getAttribute('class'));
+        console.log(box.classList);
+
+        for(i=0; i<box.classList.length; i++){
+            console.log("Class #"+i+" is "+box.classList[i]);
+        }
+
+
+        //     Methods of classList
+        // 1. Removing classes
+        box.classList.remove("abc");
+        console.log("After removing abc classes are: "+box.getAttribute("class"));
+
+        // 2. Replacing classes
+        box.classList.replace("def", "new-class");
+        console.log("After replacing def class: "+box.getAttribute("class"));
+
+        // 3. Checking if class is present in an element or not
+       console.log("Is color a class of box? "+box.classList.contains("color"));
+
+        // 4. toggle --> If a class is present, remove it. If not add it
+        
+        // As active is not present, toggle will add it
+        box.classList.toggle("active");
+        console.log("After adding new-class through toggle, remaining classes are: "+box.getAttribute("class"))
+        // As new-class is present, toggle will remove it
+        box.classList.toggle("new-class");
+        console.log("After removing new-class through toggle, remaining classes are: "+box.getAttribute("class"))
+
+    </script>
+
+</body>
+</html>

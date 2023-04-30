@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Location Object </title>
+</head>
+<body>
+
+                    <!-- Location Object -->
+    <!-- Extracts current address of the page or redirecting to any other places -->
+
+    <button id="btn1" onclick="redirect()"> Redirect </button>
+    <button id="btn2" onclick="reload()"> Reload </button>
+                    <!-- Javascript -->
+
+    <script>
+        console.log(location.href);
+        console.log(location.pathname);
+        console.log(location.protocol);
+
+        function redirect(){
+                        // Redirect to google by
+            // window.location = "https://www.google.com"    // 
+                        // OR by
+            // location.href = "https://www.google.com"
+                        // OR by
+            // location.assign("https://www.google.com");     // put entry also in browser history
+            location.replace("https://www.google.com");    // doesn't put entry in browser history
+        }
+
+        function reload(){
+            location.reload();
+        }
+        
+    </script>
+
+
+</body>
+</html>

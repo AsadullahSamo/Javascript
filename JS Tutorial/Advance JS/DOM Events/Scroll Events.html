@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Scroll Events </title>
+    
+    <style>
+        body{
+            height: 2000px;
+        }    
+    </style>
+
+</head>
+<body>
+    
+    
+                <!-- Javascript -->
+    <script>
+
+
+            // to detect any scroll on entire page, whether up or down
+        // window.addEventListener("scroll", function(){
+        //     console.log("Scrolling");
+        // })
+
+
+        // to detect scroll up or down separately on entire page
+        let prevScrollY = window.pageYOffset;
+        window.addEventListener("scroll", function(event){
+            let currentScrollY = window.pageYOffset;
+            if(currentScrollY < prevScrollY){
+                
+                console.log("Scrolling Up");
+            } else {
+                console.log("Scrolling Down");
+            }
+            console.log("prevScrollY: "+prevScrollY);
+            console.log("currentScrollY: "+currentScrollY);
+            prevScrollY = currentScrollY
+        });
+        
+
+        // determine scroll in pixels 
+        window.addEventListener("scroll", function(){
+            if(window.pageYOffset > 150){      // if scrolling is greater than 50px
+                document.body.style.background = 'red'
+            } else {
+                document.body.style.background = 'white'
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>

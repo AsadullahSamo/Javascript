@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prevent Default </title>
+</head>
+<body>
+    
+    <!-- Prevents default behaviour of DOM tree -->
+    <a href="https://www.google.com" target="_blank" id="anchor"> Google </a>
+
+    <form id="form1">
+        <input type="text">
+        <input type="submit">
+    </form>
+    <!-- 
+        Like we wanna disable link activation for first click and set it to double click
+    Then we have to prevent default behaviour, which opens link in first click 
+    -->
+                <!--Javascript -->
+    <script>
+
+        let link = document.getElementById("anchor");
+        
+        link.addEventListener("click", function(e){
+            console.log("Link clicked");
+            e.preventDefault();
+        });
+
+        link.addEventListener("dblclick", function(e){
+           
+        });
+
+
+        // Prevent form from submitting
+        let form = document.getElementById("form1");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+        })
+
+    </script>
+
+</body>
+</html>

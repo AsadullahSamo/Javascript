@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inline Style </title>
+</head>
+<body>
+    
+    <!-- Changing Inline Style of an element with JS -->
+    <button id="btn" name="form1"> Send </button>    
+
+
+                    <!-- Javascript -->
+    <script>
+        let btn = document.getElementById("btn");
+        // Change inline style either by
+        // 1. selector.style.cssText = "css properties";
+        
+        // btn.style.cssText = "background-color: red;    color: white; ";
+
+        // OR By
+        // 2. changeAttribute('style', 'values')
+        btn.setAttribute('style', 'background-color: red;    color: white;');
+
+        // 3. selector.style.property = 'value';
+        btn.style.border = "3px dotted black";
+
+    </script>
+
+
+</body>
+</html>

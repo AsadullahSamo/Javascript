@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Page Load Events </title>
+</head>
+<body>
+    
+    <img src="img/Scenary.jpg" alt="Scen" id="img1">
+
+
+    <!-- When we start a page 2 events are loaded
+
+    1. DOMContentLoaded: Loads all HTML, but not external resources 
+    like CSS, JS, images etc
+
+    2. Load: Loads all HTML, and also external resources 
+    like CSS, JS, images etc -->
+
+                    <!-- Javascript -->
+    <script>
+
+        window.addEventListener("DOMContentLoaded", function(){
+            console.log("DOM tree created")
+        })
+        // It works when all external resources are loading like JS, CSS, 
+        window.addEventListener("load", function(){
+            console.log("Page fully loaded")
+        })
+
+        let img1 = document.getElementById("img1");
+        img1.addEventListener("load", function(){
+            console.log("Page fully loaded")
+        })
+
+    </script>
+
+
+</body>
+</html>

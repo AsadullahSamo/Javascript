@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mouse Events</title>
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .box{
+            display: inline-block;
+            height: 100px;
+            width: 150px;
+            background-color: blueviolet;   
+            margin: 15px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box" onclick="fun()"> onclick </div>
+
+        <!-- for right mouse button -->
+    <div class="box" oncontextmenu="rightClick()"> oncontextmenu </div>
+
+        <!-- for Double click -->
+    <div class="box" ondblclick="dblClick()"> ondblclick</div>
+
+
+    <!-- when mouse is pressed -->
+    <div class="box" onmousedown="mouseDown()"> onmousedown</div>
+
+
+    <!-- when mouse is released -->
+    <div class="box" onmouseup="mouseUp()"> onmouseup</div>
+
+
+    <!-- when mouse is hovered over to an element -->
+    <div class="box" onmouseover="mouseOver()"> mouseover</div>
+
+
+    <!-- when mouse is set out from an element -->
+    <div class="box" onmouseout="mouseOut()"> mouseout</div>
+    </div>
+
+                    <!-- Javascript -->
+    <script>
+
+        let div = document.getElementsByClassName("box");
+
+        function fun(){
+            div[0].style.cssText = 'background-color: red;';    
+        }
+        function rightClick(){
+            div[1].style.backgroundColor = 'green';    
+        }
+        function dblClick(){
+            div[2].style.backgroundColor = 'blue';    
+        }
+        function mouseDown(){
+            div[3].style.backgroundColor = 'orange';    
+        }
+        function mouseUp(){
+            div[4].style.backgroundColor = 'indigo';    
+        }
+        function mouseOver(){
+            div[5].style.backgroundColor = 'yellow';    
+            div[5].style.color = 'red'
+        }
+        function mouseOut(){
+            div[6].style.backgroundColor = 'violet';    
+        }
+
+
+    </script>
+    
+</body>
+</html>

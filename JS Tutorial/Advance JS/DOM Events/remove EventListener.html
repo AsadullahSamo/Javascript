@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Remove Event Listener </title>
+</head>
+<body>
+    
+    <button id="btn"> Click Me </button>
+
+
+                <!-- Javascript -->
+    <script>
+
+        let btn = document.getElementById("btn");
+        
+        //       Event listeners
+        btn.addEventListener("click", click1);
+        btn.addEventListener("click", click2);
+
+        //      functions
+        function click1(){
+            console.log("Click1 is activated");
+        }
+        function click2(){
+            console.log("Click2 is activated");
+        }
+
+        // Remove Event Listener
+        // . It is condition based: Like remove eventListener if certain condition is met
+        // In this case remove click2 on click
+        btn.removeEventListener("click", click2);
+
+    </script>
+
+
+
+</body>
+</html>

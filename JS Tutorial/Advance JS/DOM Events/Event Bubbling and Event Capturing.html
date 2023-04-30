@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Bubbling and Event Capturing </title>
+
+    <style>
+        body{
+            padding: 100px;
+            background-color: cornsilk;
+        }
+        #container{
+            padding: 50px;
+            background-color: darkblue;
+        }
+    </style>
+
+</head>
+<body>
+    
+    
+
+    <div id="container">
+        <button id="btn"> Click Me </button>
+    </div>
+
+    <!-- Event Bubbling:  Event flows from bottom to top
+    Like in this case, from button to div to body to html to document
+
+    Event Capturing:  Event flows from top to bottom
+    Like in this case, from document to html to body to div to button -->
+
+    <!--
+        Syntax: 
+        addEventListener(event, function, useCapture);
+        By default is false, means event bubbling
+    -->
+
+                    <!-- Javascript -->
+    <script>
+
+        let div = document.getElementById("container");
+        let btn = document.getElementById("btn");
+
+        //      Event Listeners
+        btn.addEventListener("click", btnClicked, true);    // By defaule useCapture is false. so, event bubbling will be loaded
+        div.addEventListener("click", divClicked, true);
+        document.body.addEventListener("click", bodyClicked, true);
+
+
+        //      Functions
+        // function btnClicked(){
+        //     console.log("Button clicked");
+        // }
+        // function divClicked(){
+        //     console.log("Div clicked");
+        // }
+        // function bodyClicked(){
+        //     console.log("Body clicked");
+        // }
+
+
+        // stop propogation at certain stage
+        function btnClicked(){
+            console.log("Button clicked");
+            
+        }
+        function divClicked(){
+            console.log("Div clicked");
+        }
+        function bodyClicked(e){
+            console.log("Body clicked");
+            e.stopPropagation();
+        }
+    </script>
+
+</body>
+</html>
