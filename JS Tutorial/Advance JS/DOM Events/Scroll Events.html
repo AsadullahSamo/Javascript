@@ -31,13 +31,10 @@
         window.addEventListener("scroll", function(event){
             let currentScrollY = window.pageYOffset;
             if(currentScrollY < prevScrollY){
-                
                 console.log("Scrolling Up");
             } else {
                 console.log("Scrolling Down");
             }
-            console.log("prevScrollY: "+prevScrollY);
-            console.log("currentScrollY: "+currentScrollY);
             prevScrollY = currentScrollY
         });
         

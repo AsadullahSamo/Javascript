@@ -54,7 +54,7 @@ console.log(num);    // now it declares num by itself at line with let num;
 //  For functions and function expressions
 
 // greet1();
-// greet3();
+// greet2();
 // greet3();
 // greet4();
 

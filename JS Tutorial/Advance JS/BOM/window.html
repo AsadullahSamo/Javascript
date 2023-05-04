@@ -5,13 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> window </title>
-
-    <style>
-        body{
-            background-color: red;
-        }
-    </style>
-
 </head>
 <body>
 
@@ -35,6 +28,9 @@
     // 1. window.open(url, name, features):  opens a new window
     
     let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let btn3 = document.getElementById("btn3");
+
     let url = "https://www.google.com";
     let features = "height=500, width=500";
     
@@ -44,14 +40,14 @@
         win = window.open(url, 'google', features);
     })
 
-    let btn2 = document.getElementById("btn2");
     btn2.addEventListener("click", function(){
-        window.open('https://www.yahoo.com', 'google', features);
+        window.open('https://www.yahoo.com', 'google', features);    // If google is already opened, just open yahoo.com without opening new window
     })
-
-    let btn3 = document.getElementById("btn3");
+    
     btn3.addEventListener("click", function(){
+        if(win){
         win.close();
+        }
     })
 
     </script>

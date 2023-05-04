@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prototype and Inheritance </title>
+</head>
+<body>
+    
+
+
+                    <!-- Javascript -->
+    <script>
+        // Javascript attaches Prototype to each object
+        
+        let person1 = {}
+        let person2 = {
+            name: "Asad"
+        }
+        // Javascript attaches Prototype to above two properties
+        console.log(person2.hasOwnProperty('name'));
+        //          OR 
+        console.log('name' in person2);
+
+
+        // constructor function has two prototypes, one for itself, one for object
+       
+        // Prototype Chaining
+        // 1. First of all Object prototype is in NULL container(container having nothing)
+        // 2. When we make a constructor function, the Object prototype is connected with that constructor function's Prototype
+        // 3. After that constructor function's prototype is connected with every object created
+        // 4. This entire process is k/A Prototype Chaining
+        // Prototype is used in Inheritance before ES6
+
+        function Creature(lifespan){
+            this.lifespan = lifespan;
+        }
+
+        Creature.prototype.breath = function(){
+            console.log("Breathing...");
+        }
+
+        let c1 = new Creature(100);
+
+        console.log(c1);
+         // Constructor Function
+         function Person(fname, lname, age){
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+
+            // Rather than putting it here, we'll put it into Prototype
+            // this.fullName = function(){
+            //     console.log(this.fname + " " + this.lname)
+            // }
+            
+        }
+
+        Person.prototype.fullName = function(){
+            console.log(this.fname + " " + this.lname)
+        }
+
+        // Person.prototype = Object.create(Creature.prototype);    // This will break objects link with Person prototype
+        Person.prototype.__proto__ = Creature.prototype;
+
+        let p1 = new Person("Asad", "Samo", 18)
+        let p2 = new Person("Junaid", "Samo", 28);
+
+        // properties and methods are copied, 
+        // As long as regarding properties, it is fine(properties for different person is different)
+        // but methods remained same, internally, again violating DRY principle
+        // So, we will put all methods of constructor function inside its prototype
+
+        console.log(p1);
+        console.log(p2);
+
+        p1.fullName();
+        p2.breath();
+    </script>
+
+
+</body>
+</html>

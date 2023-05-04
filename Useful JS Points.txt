@@ -1,1 +1,1 @@
-this.classList.toggle('active')       // adds active class to an element, and if already added, remove it. Useful for making FAQs
+Important link for this keyword: https://www.w3schools.com/js/js_this.asp

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> OOP before ES6 </title>
+</head>
+<body>
+    
+
+                    <!-- Javascript -->
+        <!-- Before ES6 we used to make object directly -->
+    <script>
+
+        let person1 = {
+            fname: "Asadullah",
+            // 'last name': "Samo",
+            lname: "Samo",
+            age: 18,
+
+            fullName: function(){
+                console.log(`${this.fname} ${this.lname}`)
+            }
+        };
+
+        // Accessing properties using dot notation
+        console.log(person1.fname);        
+
+        // dot notation is not valid for vars with spaces, so we use square braces
+        // console.log(person1.'last name');     // Error        
+        // console.log(person1['last name']);   
+        
+        person1.fullName();
+
+
+        let person2 = {};
+        person2.name = 'Awais';
+        console.log(person2.name);
+
+        let person3 = new Object();
+        person3.name = "Junaid";
+        console.log(person3.name)
+
+
+        console.log("\t\t\t\t\t\t\t\t Constructor Function\n")
+
+        // if we have to make 10 persons, then we've to repeat all above properties 10 times, violating DRY principle
+        // Rather than doing this, we use constructor function
+        function Person(fname, lname, age){
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+
+            this.sayHi = function(){
+                console.log("Hi!");
+            }
+        }
+
+        let p1 = new Person("Lara", "Croft", 27);
+        let p2 = new Person("Triss", "Merigold", 50);
+        console.log(p2.lname)
+        p2.sayHi();
+    </script>
+
+
+</body>
+</html>

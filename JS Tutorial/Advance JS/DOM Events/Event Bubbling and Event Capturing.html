@@ -63,16 +63,16 @@
 
 
         // stop propogation at certain stage
-        function btnClicked(){
+        function btnClicked(e){
             console.log("Button clicked");
-            
+            e.stopPropagation();
         }
         function divClicked(){
             console.log("Div clicked");
         }
-        function bodyClicked(e){
+        function bodyClicked(){
             console.log("Body clicked");
-            e.stopPropagation();
+            
         }
     </script>
 

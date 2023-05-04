@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class, Object and Inheritance </title>
+</head>
+<body>
+    
+
+                        <!-- Javascript -->
+    <script>
+
+        class Person{
+            // Constructor of class
+            constructor(name, age){
+                this.name = name
+                this.age = age;
+            }
+
+            sayHi(){           // Methods will attach in Prototype automatically
+                console.log("Hi!");
+            }
+
+            // static method
+            static hello(){        // called with class
+                console.log("Hello, World!");
+            }
+        }
+
+        let person1 = new Person("Asad", 18);
+        console.log(person1)
+        
+        person1.sayHi();
+        Person.hello();
+
+
+        //       Inheritance 
+        class Emp{
+            constructor(name){
+                this.name = name;
+            }
+            msg(){
+                console.log("msg() func is called");
+            }
+        }    // end of class Emo
+        class Manager extends Emp{    
+            #age = 18;     // It is private property now
+            constructor(name, department){
+                super(name);
+                this.department = department;
+            }
+
+            #getAge(){
+                console.log("Age is " + this.#age);
+            }
+
+            pubfun(){
+                this.#getAge();
+            }
+
+            info(){
+                console.log(this.name + " is manager of dept: " + this.department);
+                this.msg();        // either use this OR super.msg();
+            }
+        }      // end of class Manager
+        
+        let mng1 = new Manager("Asad", "Web Development");
+        mng1.info(); 
+        // console.log(mng1.#age);    // Error, b/c it is private
+        // mng1.#getAge();         // Error, cause it's private
+        mng1.pubfun();
+
+
+        //  Mixing:  Assigning object methods to class
+        let usefulMethods = {
+            sayHi: function(){
+                console.log("Hi!");
+            },
+
+            sayBye: function(){
+                console.log("Bye!");
+            }
+        }
+
+        
+        class User{
+            constructor(name){
+                this.name = name;
+            }
+        }
+
+        // Assigning usefulMethods's methods to User class
+        Object.assign(User.prototype, usefulMethods);     // Can be more than one mixing. 
+
+        let user1 = new User("Asad");
+        console.log(user1);
+
+
+
+    </script>
+
+
+</body>
+</html>

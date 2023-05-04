@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Object Destructuring </title>
+</head>
+<body>
+    
+
+                <!-- Javascript  -->
+    <script>
+
+        let book = {
+            name: "Advance JS",
+            page: 200,
+            price: 150
+        };
+
+        let book2 = {
+            name2: "OOP in C++",
+            page2: 1000,
+            price2: 450,
+        };
+
+        // let name = book.name;
+        // console.log(name);
+
+        let{name, page, price} = book;   // when destructuring object name should be same as property   
+        console.log(name);
+
+        // if we wanna change name, we can do this by
+        let{name2 : title, page2, price2, abc, default_val="Default"} = book2;   
+        // console.log(name2);    // this will give error, as now variable is title(not name)
+        console.log(title); 
+        console.log(abc); 
+        console.log(default_val); 
+
+
+        // For nested object, destructuring will be like 
+        let details = {
+            name: {
+                fname: "Asad",
+                lname: "Samo"
+            }, 
+            age: 18,
+            interest: 'Programming'
+        }
+
+        let{name: {fname, lname}, age, interest} = details;
+        console.log(lname);
+
+    </script>
+
+
+</body>
+</html>

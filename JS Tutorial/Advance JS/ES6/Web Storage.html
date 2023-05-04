@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Storage </title>
+</head>
+<body>
+    
+
+    <!-- Web Storage (Local Storage and Session Storage) -->
+                    <!-- Javascript -->
+    <script>
+
+        // Cookies, Local storage and Session storage all used to store data in browser
+        //  Local Storage: Syntax: localStorage.setItem(key, value);
+        localStorage.setItem("FirstName", "Asad");
+        localStorage.setItem("loc", "Pakistan");
+
+        console.log(localStorage.getItem("loc"));
+        localStorage.removeItem("loc");    
+
+        //  Session Storage: Syntax: sessionStorage.setItem(key, value);
+        sessionStorage.setItem("Item", "Bread");
+        sessionStorage.setItem("Department", "SWE")
+        sessionStorage.setItem("Age", "18");
+
+        console.log(sessionStorage.getItem("Item"));
+        sessionStorage.removeItem("Item");
+
+    </script>
+
+
+</body>
+</html>

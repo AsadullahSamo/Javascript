@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Arrow Functions </title>
+</head>
+<body>
+    
+
+
+                    <!-- Javascript -->
+    <script>
+        class Person{
+            constructor(name){
+                this.name = name;
+            }
+            printNameFunction(){
+                setTimeout(function(){
+                    console.log("Function: " + this.name);
+                }, 1000)
+            }      // end of printNameFunction();
+            printNameArrow(){
+                setTimeout(() => {
+                    console.log("Arrow: " + this.name);
+                }, 1000)
+            }      // end of printNameArrow()
+        }    // end of class Person
+
+        function sum(a, b){
+            return a + b
+        }
+        let sum2 = (a, b) => {       // OR as there is only one line inside function we can reduce return statement and parentheses
+            return a + b          // let sum2 = (a, b) => a+b;
+        }
+
+        function isPositive(num){
+            return num > 0;
+        }
+        let isPositive2 = (num) => {      // OR as it is one liner
+            return num > 0;            //  let isPositive2 = num => num > 0;
+        }
+
+        function randomNumber(){
+            return Math.random;
+        }
+        let randomNumber2 = () => {    // OR as it is one liner
+            return Math.random;         // let randNum = () => Math.random;
+        }
+
+        document.addEventListener("click", function(){
+            console.log("Click");
+        })
+        document.addEventListener("click", () => {
+            console.log("Click");
+        })
+
+        let person = new Person("Asad");
+        person.printNameFunction();
+        person.printNameArrow();
+        
+    </script>
+
+
+</body>
+</html>

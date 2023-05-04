@@ -19,9 +19,10 @@
         // 1. selector.style.cssText = "css properties";
         
         // btn.style.cssText = "background-color: red;    color: white; ";
+        // if we want not to override previous style use:  btn.style.cssText += "css properties"
 
         // OR By
-        // 2. changeAttribute('style', 'values')
+        // 2. setAttribute('style', 'values')
         btn.setAttribute('style', 'background-color: red;    color: white;');
 
         // 3. selector.style.property = 'value';

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array Destructing </title>
+</head>
+<body>
+    
+
+                    <!-- Javascript -->
+    <script>
+        let book = ["Advance JS", 200, 150];
+        let cars = ["Rolls Royce", , "BMW", "Corolla"];
+        console.log(book[0]);
+
+        // If we wanna store each element in a variable, we can use either
+        // let name = book[0], pages = book[1], price = book[2];
+        //           OR using Array Destructing
+        let[name, pages, price] = book;
+        console.log("Price is " + price);
+
+        // As for car2 and car5 there is no value so, output will be undefined
+        let[car1, car2, car3, car4, car5] = cars;
+
+        console.log(car2);
+        console.log(car5);
+
+        // If we want to assign car2 default value, we can do this by
+        [car1, car2="Honda", car3, car4, car5="Cultus"] = cars;
+        console.log(car2);    
+        console.log(car5);
+
+        // To perform array destructing on nested array
+        let book2 = ["Advance JS", 200, 150, ["Google", 2021]];
+        let[name2, pages2, price2, [publication, year]] = book2;
+        console.log(publication);
+        
+
+
+
+    </script>
+
+
+</body>
+</html>
