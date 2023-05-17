@@ -1,1 +1,23 @@
 Important link for this keyword: https://www.w3schools.com/js/js_this.asp
+. console.log((0.2*10 + 0.1*10)/ 10) ;    // A solution to common JS problem (0.2+0.1 ends up in a number with more zeros like 0.3000000000)
+. console.table(array) --> To see array in form of table
+. vars defined with var keyword can be redeclared, while with that of let can't be 
+. padStart(arg, length)        . . padEnd(length, arg)
+. Comparing two JavaScript objects always returns false.
+. To create a BigInt, append n to the end of an integer or call BigInt(): like 
+let x = 989898989828738927398729873n OR let x = BigInt(989898989828738927398729873)
+. // Create an array with one element:
+	const points = [40];
+// Create an array with 40 undefined elements:
+	const points = new Array(40);  
+
+. The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).
+	// Create an object:
+const car = {type:"Fiat", model:"500", color:"white"};
+	// Ask for car name:
+document.getElementById("demo").innerHTML = car?.name;
+. Switch uses strict comparison (===)
+. Sets are arrays with unique values (so using sets we can remove duplicates from array)
+. parseInt(num, 2) OR parseInt(str, 2) --> To convert a binary number to a integer
+. String.fromCharCode(num)   --> To get character at num, useful for printing alphabets, like character code for A is 65, for a is 97
+. str.charCodeAt(character)  --> To get ASCII value of character (vice versa of String.fromCharCode() method)

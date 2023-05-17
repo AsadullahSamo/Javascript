@@ -30,6 +30,6 @@ console.log("Char at 2 of Asad is "+str.charAt(2));        //  or console.log(st
     // 7. replace(strToReplace, strToReplaceWith)
     console.log(line.replace("Javascript", "JS"));
 
-    // 8. Boolean includes(str)  --> Check whether string is present or not      
+    // 8. Boolean includes(str)  --> Check whether string is present or not  OR item is in array or not    
     console.log(line.includes("Javascript"));
     // or to check whether string is present or not we can also use indexOf(str) if it returns -1 means string is not present)

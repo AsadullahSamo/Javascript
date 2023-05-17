@@ -47,3 +47,26 @@ person.eat();
 person.printInfo();
 
 // this is used to access same property in same object
+
+//     Object.keys(obj) --> Returns array of all the keys of object
+const trissMerigold = {
+    name: 'Triss Merigold',
+    occupation: 'Sorceress',
+    age: 40,
+    hairColor: 'Red',
+    abilities: ['Fire magic', 'Telekinesis', 'Healing'],
+    hometown: 'Maribor',
+    affiliation: 'Lodge of Sorceresses',
+    friends: ['Geralt of Rivia', 'Yennefer of Vengerberg', 'Ciri'],
+    beauty: {
+      description: 'Known for her stunning beauty and fiery red hair',
+      charm: 9.9,
+      grace: 9.7
+    },
+    fearless: {
+      description: 'Fearless in battle and unafraid to use her magic to protect her friends',
+      courage: 9.8,
+      magicalMastery: 9.7
+    }
+};
+console.log(Object.keys(trissMerigold));

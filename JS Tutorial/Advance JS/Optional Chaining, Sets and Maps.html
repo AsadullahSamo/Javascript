@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sets and Maps </title>
+</head>
+<body>
+    
+
+    
+                        <!-- Javascript -->
+    <script>
+
+        //                        Sets
+        let nums = [1, 2, 3, 3, 4, 5, 5, 2, 78, 98, 5, 6, 7, 3];
+        const uniqueNums = new Set(nums);
+        console.log(uniqueNums);
+
+        //                        Maps
+        const maps = new Map([[1, "Asad"], [2, "Mohsin"], [3, "Abdul Rasheed"], [4, "Junaid"], [5, "Miss Merigold"]])
+        console.log(maps);
+        console.log(maps.get(5));
+
+        
+        //                     Optional Chaining
+        //  It can only be used with arrays, object properties and object methods (and not with global functions)
+        let person = {
+            fname: "Asad",
+            lname: "Samo",
+            age: 18,
+            fullName: function(){
+                return this.name + " " + this.lname;
+            }
+        }
+
+        let printName = () => {
+            console.log("I exist");
+        }
+        
+        console.log(nums?.[18]);
+        console.log(person.fname)
+        console.log(person.address)       // As address does not exist it prints undefined
+        printName();
+        // sayHi?.();                        // Error: Optional Chaining does not work with global functions
+        person.sayHi?.();               // As sayHi() is not a function, it does not print anything (no error is thrown)
+        
+
+                    // Exponential notation to print nums
+       // console.log(3.5e6);         // 3500000
+      //  console.log(3.5e-6);         // 0.0000035
+        
+    </script>
+
+
+</body>
+</html>

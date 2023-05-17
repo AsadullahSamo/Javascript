@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Regular Expressions </title>
+</head>
+<body>
+    
+
+                            <!-- Javascript -->
+    <script>
+        // Using 
+        // 1. test() --> Syntax:  regexp.test(string)
+        let string = "This is freeCodeCamp";
+        let regExp = /Code/;
+        let result = regExp.test(string);
+        console.log(result);
+        
+        //  | operator in regexp (if even one value is true, it returns true)
+        let groceryString = "I need to go to the grocery store to get some milk, eggs, bread, and cheese for breakfast tomorrow."
+        regExp = /ice cream|butter|cheese|eggs/
+        result = regExp.test(groceryString);
+        console.log(result);
+
+        // flags 
+        regExp = /ChEESe/i         // match cheese with case insensitive
+        console.log(regExp.test(groceryString))
+        regExp = /to/g     // match all to
+        console.log(regExp.test(groceryString))
+
+        // 2. match() --> Syntax: string.match(regexp)   (Returns the index)
+        let extractString = /grocery/
+        result = groceryString.match(extractString) 
+        console.log(result)
+
+        // . wildcard
+        let line = "The fat cat sat on the mat and licked its paw, while the little rat scurried by and hid in the hat."
+        let regex = /.at/       // searches for fat, cat, sat, mat, rat in above line
+        console.log(regex.test(line));
+        // [] wildcard --> Ex: [fcs]at , matches fat, cat, sat but not mat, rat in above line
+        // [-] wildcard --> Ex: [c-m]at , matches cat, fat, mat but not sat, rat in above line
+        // Ex: [a-e0-5]  // match all characters from a to e and all nums from 0 to 5
+        // [^] wildcard --> Ex: [^aeiou] mathes all charcters that ain't vowel
+        // \b --> for word boundary, \w for all alphanumeric, \s for all whitespaces
+    </script>
+
+
+
+</body>
+</html>

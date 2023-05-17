@@ -1,30 +1,37 @@
 let play = document.getElementsByClassName("fa-play");
-console.log(play);
+// console.log(play);
 
 
 let reset = document.getElementsByClassName("fa-redo");
-console.log(reset);
+// console.log(reset);
 
 let hour = document.getElementsByClassName("hour");
-console.log(hour);
+// console.log(hour);
 
 let mins = document.getElementsByClassName("mins");
-console.log(mins);
+// console.log(mins);
 
 let secs = document.getElementsByClassName("secs");
-console.log(secs);
+// console.log(secs);
 
 
 
-console.log(secs[0].innerHTML);
+// console.log(secs[0].innerHTML);
 
 play[0].addEventListener("click", startTime);
-
+reset[0].addEventListener("click", stop);
+let l;
+function stop(){
+    clearInterval(l);
+    hour[0].innerHTML = '00';
+    secs[0].innerHTML = '00';
+    mins[0].innerHTML = '00';
+}
 
 function startTime(){
     
     let i = 0, j = 0, k = 0;
-    setInterval(function(){
+    l = setInterval(function(){
         i++;  
         if(i<=9){
             secs[0].innerHTML = "0" + i;
@@ -53,7 +60,7 @@ function startTime(){
             hour[0].innerHTML = k;
         } 
     }, 1000)            
-}     // end of while loop
+}     // end of function
 
 
         

@@ -192,6 +192,74 @@
         });
         console.log(byGender);
 
+
+        console.log('\n');
+        console.log('\t\t\t\t\t\t\t reduce()')
+        
+
+    // 4. reduce() --> each return value is going to be next value for accumulator
+    // Syntax: 
+    //     array.reduce((accumulator, arrElement) => {
+
+    //     }, initialVal)
+
+        
+        // 1. Calculate total height of entire characters array
+        const totalHeight = characters.reduce((total, character) => {
+            console.log("total: " + total);
+            console.log("character.height: " + character.height);
+            return total + Number(character.height);
+        }, 0)
+        console.log(totalHeight);
+
+        // 2. Get total number of characters by eye color
+        // const byEyeColor = characters.reduce((color, character) => {
+        //     let eyeColor = character.eye_color;
+        //     if(color[eyeColor]){
+        //         color[eyeColor] += 1;
+        //     } else {
+        //         color[eyeColor] = 1 
+        //     }
+        //     return color;
+        // }, {})
+        // console.log(byEyeColor);
+
+
+        const byEyeColor = characters.reduce((color, character) => {
+            let eyeColor = character.eye_color;
+            if(color[eyeColor] == null){
+                color[eyeColor] = []
+            } 
+                color[eyeColor].push(character);
+            
+            return color;
+        }, {})
+        console.log(byEyeColor);
+
+        // 3. Get total number of characters in all the character names;
+        const totalNameCharacters = characters.reduce((name, character) => {
+            return name + character.name.length
+        }, 0)
+        console.log(totalNameCharacters);
+
+
+       console.log('\n');
+       console.log('\t\t\t\t\t\t\t find()')
+
+    //    7. find() 
+    //    The find() method returns the value of the first array element that passes a test function.
+        let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+         let firstHeightGreaterThan5 = nums.find((num) => {
+            return num > 5;  
+         });
+         console.log(firstHeightGreaterThan5)
+
+
+    //     from()
+        const myArr = Array.from("ABCDEFG");
+        console.log(myArr);
+
+         
     </script>
 
 

@@ -7,7 +7,9 @@ console.log(typeof cars);
 let books = ["Math", "Physics", "C++", "Javascript", "PostgreSQL"];
 console.log(books);
 console.log(books[2]);
-
+// If you want to access last element, you can either use 
+// console.log(books[books.length - 1]);    OR simply
+console.log("Last Element: " + books.at(-1));   
 let text = "<ul>";
 
 for(let i=0; i<books.length; i++){
@@ -33,7 +35,12 @@ console.log(books);
 books.unshift("Sams Teach Yourself Java");
 console.log(books);
 
-// //    4. splice(startingIndex, numOfElementsToRemove)
+//    4. splice(startingIndex, numOfElementsToRemove, newElement, newElement, newElement, ...)
+//    Using splice() to add elements at specific position
+books.splice(2, 0, "Islamiyat", "Science", "Biology");                // means add these elements from index 2 while removing 0 elements
+console.log(books);
+
+//      Using splice() to remove elements
 books.splice(2, 1);                // means remove 1 element from index 2 (index 2 element will be removed)
 console.log(books);
 
@@ -61,8 +68,20 @@ console.log(wordArray)
 let string = books.join(" ");
 console.log(string);
 
+// 9. slice(startIndex, endIndex)  --> Use to copy elements from one arr to another (endIndex excluded)
+// Ex:  
+let numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let numArr2 = numArr.slice(2, 5);
+console.log(numArr2);
 
-//   concat(arg1, arg2....) --> Combines two or more arrays
+// 10. reverse()   --> Reverses an array
+let stringArr = ["Asad", "Junaid", "Abdul Rasheed", "Awais", "Ubaid", "John Cena"]
+console.table(numArr);
+console.log(numArr.reverse())
+console.log(stringArr.reverse())
+
+
+// 11. concat(arg1, arg2....) --> Combines two or more arrays
 let books2 = ["Islamic Studies", "Science", "DSA"];
 let books3 = ["Urdu", "Sindhi"];
 let newArray = books.concat(books2, books3);
@@ -79,3 +98,4 @@ let bookWithPages = [
 console.log(bookWithPages);
 console.log(bookWithPages[1]);
 
+console.log((0.2*10 + 0.1*10)/ 10) ;

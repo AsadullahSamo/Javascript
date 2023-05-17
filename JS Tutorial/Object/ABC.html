@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ABC of JS </title>
+</head>
+<body>
+    
+
+
+                            <!-- Javascript -->
+    <!-- ABC in our case refers to apply(), bind(), call() methods of JS, used to change context of this keyword -->
+    <script>
+
+        // 1. call(arg)    
+        // // used to call a method belonging to another object
+        // // Whichever object you want to use that method with, pass it as an arhument of call()
+        // // this will now be refering to new object
+
+        console.log("\t\t\t\t\t\t\t\t\t\t\t\t call()")
+        let employee = {
+            name: "John",
+            cook: function(){
+                console.log(this.name + " is cooking")
+            }
+        }
+        let supervisor = {
+            name: "James",
+            cash: function(){
+                console.log(this.name + " is at the cash register")
+            }
+        }
+        let manager = {
+            name: "Asad",
+            inCharge: function(){
+                console.log(this.name + " is in charge")
+            }
+        }
+
+        // employee.cook();
+        // supervisor.cash();
+        // manager.inCharge();
+
+        employee.cook.call(supervisor);          // this now refers to supervisor (so this.name now refers to James)
+        supervisor.cash.call(manager);          //  this now refers to manager (so this.name now refers to Asad)
+        manager.inCharge.call(employee);       //   this now refers to employee (so this.name now refers to John)
+
+
+        console.log("\t\t\t\t\t\t\t\t\t\t\t\t bind()") 
+        // 2. bind(arg)    
+        // borrows a function and creates a copy of it
+        // Looks similar to call() but main difference is 
+        // . bind() returns a new function while call() does not
+        // . call() immediately invokes a function while bind() does not
+
+        const anotherPersonInCharge = manager.inCharge.bind(supervisor);
+        // const anotherPersonInCharge = manager.inCharge.call(supervisor);    // This is error as call does not return a function but immediately invokes it
+        anotherPersonInCharge();
+
+        //   bind() and call(): Example# 02
+        let person = {
+            name: "Asad",
+            age: 18
+        }
+        function greet(name, age){
+            console.log(`Hi, My name is ${this.name} and my age is ${this.age}`);
+        }        
+
+        greet.call(person);
+        const personInfo = greet.bind(person);
+        personInfo();
+       
+
+        console.log("\t\t\t\t\t\t\t\t\t\t\t\t apply()") 
+        // 3. apply(object, array)    
+        // Works similar to call(), but takes an array instead of individual params
+
+        let classRoom = {
+             
+            takeAttendance: function(...students){
+                console.log(`${this.name} is taking attendance`);
+                for (const iterator of students) {
+                    console.log(iterator);
+                }
+            }
+        }
+
+        let name = "Miss Merigold";
+        let teacher = {
+            name          // If we have same name as of property as that of variable we can skip this part like, instead of (name: name) we can simply use name
+        }
+ 
+        // classRoom.takeAttendance.call(teacher, "James", "Jane", "Peter", "Asad", "Junaid")
+        let students = ["James", "Jane", "Peter", "Asad", "Junaid"];
+        classRoom.takeAttendance.apply(teacher, students);
+        // same as above call() method at line: 95, but instead of passing individual students names, we passed an array which is more flexible
+        
+
+    </script>
+
+
+</body>
+</html>

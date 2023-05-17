@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Temperature Converter </title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            height: 200px;
+            background-color: rgb(92, 146, 68);
+        }
+        #celsiusBox, #farenheitBox{
+            width: 270px;
+            height: 40px;
+            margin-left: 40px;
+            background-color: white;
+            border: none;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .boxText{
+            margin-left: 140px;
+            color: white;
+            font-size: 22px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+
+    <h1> Temperature Converter</h1>
+    <div class="box">
+        <!-- <p> Celsius </p> -->
+        <div>
+        <label for="celsiusBox" class="boxText"> Celsius </label> <br>
+        <input type="number" name="celsiusBox" id="celsiusBox">
+        </div>
+        <!-- <p> farenheitBox </p> -->
+        <div>
+        <label for="farenheitBox" class="boxText"> Farenheit </label><br>
+        <input type="number" name="farenheitBox" id="farenheitBox">
+        </div>
+        
+    </div>
+    
+    <script>
+        let celTemp = document.getElementById("celsiusBox");
+        let farenTemp = document.getElementById("farenheitBox");
+
+        let celciusValue = 0, farenheitValue = 0;
+        celTemp.addEventListener("input", function(){
+            celciusValue = this.value;     
+            let f = (celciusValue * 9/5) + 32;
+            if(!Number.isInteger(f)){
+                f = f.toFixed(4);
+            }
+            farenTemp.value = f
+        })
+        
+        farenTemp.addEventListener("input", function(){
+            farenheitValue = this.value;
+            let c = (farenheitValue - 32) * 5/9;
+            if(!Number.isInteger(c)){
+                c = c.toFixed(4);
+            }
+            celTemp.value = c;
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Word Counter </title>
+
+    <style>
+        body{
+            margin-left: 145px;
+        }
+        #heading, #counter{
+            width: 90%;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #board{
+            width: 90%;
+            height: 500px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    
+    <div class="inp">
+        <input type="text" name="heading" id="heading" value="Word and character counter">
+    </div>
+
+    <div>
+        <textarea name="board" id="board" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="inp">
+        <input type="text" name="counter" id="counter" value="0 words and 0 characters"> 
+    </div>
+
+    <script>
+        let board = document.getElementById("board");
+        let counter = document.getElementById("counter");
+            
+        // let str = "";
+        board.addEventListener("input", function(){
+            let count = 0, words = 0;
+            let str = board.value.replaceAll(/\s+/g, " ");
+            console.log("str: " + str)
+            for(let i=0; i<str.length; i++){
+                if(str[i]===' '){
+                    words++;
+                } else {
+                    count++;
+                }
+            }
+            counter.value = `${words} words and ${board.value.length} characters`;
+            console.log(str);
+        })
+
+    </script>
+
+</body>
+</html>
