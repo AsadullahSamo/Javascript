@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Counter </title>
+    <style>
+        @font-face {
+            font-family: robotto;
+            src: url('../Color Flipper/fonts/Roboto-Regular.ttf');
+        }
+        @font-face {
+            font-family: sans;
+            src: url('../Color Flipper/fonts/OpenSans-Medium.ttf');
+        }
+        body{
+            background-color: #f1f5f8;
+        }
+        h1{
+            color: #102a42;
+            font-size: 70px;
+            position: relative;
+            letter-spacing: 4px;
+            font-weight: bold;
+            top: 100px;
+            font-family: robotto;
+            text-align: center;
+        }
+        #number{
+            top: 50px;
+            font-size: 120px;
+            font-family: sans;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 5px;
+        }
+        ul li{
+            padding-left: 15px;
+        }
+        ul li button{
+            letter-spacing: 4px;
+            padding: 5px 15px;
+            border-radius: 9px;
+            text-transform: uppercase;
+            border: 2px solid #102a42;
+        }
+        ul li button:hover{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> Counter </h1>
+    <h1 id="number"> 0 </h1>
+
+    <ul>
+        <li> <button id="decrease"> Decrease </button></li>
+        <li> <button id="reset"> Reset </button></li>
+        <li> <button id="increase"> Increase </button></li>
+    </ul>
+
+    <script>
+        let number = document.getElementById("number");
+        let decrease = document.getElementById("decrease");
+        let reset = document.getElementById("reset");
+        let increase = document.getElementById("increase");
+
+        let count = 0;
+        decrease.addEventListener("click", function(){
+            count--;
+            if (count < 0){
+                number.style.color = 'red';
+            } else if(count > 0){
+                number.style.color = 'green';
+            } else if (count === 0) {
+                number.style.color = '#102a42';
+            }
+            number.innerHTML = count;
+        })
+
+        reset.addEventListener("click", function(){
+            count = 0;
+            number.innerHTML = 0;
+            number.style.color = '#102a42'
+        })
+
+        increase.addEventListener("click", function () {
+                count++;
+                if (count < 0) {
+                    number.style.color = 'red';
+                } else if (count > 0) {
+                    number.style.color = 'green';
+                } else if (count === 0) {
+                    number.style.color = '#102a42';
+                }
+                number.innerHTML = count;
+            })
+    </script>
+
+
+</body>
+</html>

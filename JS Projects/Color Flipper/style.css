@@ -1,0 +1,80 @@
+@font-face {
+  font-family: sans;
+  src: url("fonts/OpenSans-Medium.ttf");
+}
+@font-face {
+  font-family: robotto;
+  src: url("fonts/Roboto-Regular.ttf");
+}
+* {
+  margin: 0;
+}
+body {
+  background-color: #f1f5f8;
+}
+nav ul {
+  list-style-type: none;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25%;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+nav ul li {
+  padding: 12px;
+}
+nav ul li:first-child {
+  font-family: robotto;
+  color: #49a6e9;
+}
+#simple,
+#hex {
+  font-family: sans;
+}
+#simple:hover,
+#hex:hover {
+  color: #49a6e9;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#bg-color,
+#click {
+  background-color: #222222;
+  margin: 0% 25%;
+  padding: 15px;
+  color: #fff;
+  font-size: 35px;
+  font-family: robotto;
+  letter-spacing: 4px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  text-align: center;
+}
+#click {
+  transform: translate(-85px, 70px);
+  font-size: 17px;
+  padding: 10px 25px;
+  background-color: #f1f5f8;
+  color: black;
+}
+#click:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#val {
+  color: #49a6e9;
+}
+@media screen and (max-width: 770px) {
+  #bg-color {
+    width: 90%;
+  }
+}
