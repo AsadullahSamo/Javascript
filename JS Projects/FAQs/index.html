@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This project is about creating a FAQs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> FAQs </title>
+    <style>
+        @font-face {
+            font-family: GreatVibes;
+            src: url('fonts/GreatVibes-Regular.ttf');
+        }
+        @font-face {
+            font-family: sans;
+            src: url('fonts/OpenSans-Regular.ttf');
+        }
+        body{
+            background-color: #f1f5f8;
+        }
+        h1{
+            color: #c59d5f;
+            font-family: GreatVibes;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 105px;
+            letter-spacing: 3px;
+        }
+        div{
+            font-family: sans;
+            width: 35rem;
+            height: 40px;
+            background-color: white;
+            padding: 25px 10px 1px 22px;
+            border-radius: 8px;
+            letter-spacing: 4px;
+            text-transform: capitalize;
+            color: #102a42;
+            font-weight: 500;
+            margin: 25px auto;
+            box-shadow: 1px 5px 5px #e3e7ea;
+            
+        }
+        div span{
+            margin-right: 18px;
+            padding: 1px 0px 1px 1px;
+            float: right;
+            color: #c59d5f;
+            border-radius: 4px;
+        }
+        hr{
+            margin-top: 25px;
+        }
+        p{
+            letter-spacing: 0;
+            text-transform: lowercase;
+            color: #617d98;
+        }
+        p::first-letter{
+            text-transform: uppercase;
+        }
+        div span:hover{
+            cursor: pointer;
+        }
+        .active{
+            display: none;
+        }
+        .height{
+            height: 140px;
+        }
+        @media screen and (max-width: 626px){
+            div{
+                width: 28rem;
+                letter-spacing: 0;
+            }     
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1> General Questions </h1>
+    <div> Do you accept all major Credit Cards? <span class="fa fa-plus"> </span>
+    <hr class="active">
+    <p class="active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus quaerat, magni
+    numquam repellat reprehenderit.</p>
+    </div>
+    
+    <div> Do you support local farmers? <span class="fa fa-plus"> </span>
+    <hr class="active">
+    <p class="active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus
+    quaerat, magni numquam repellat reprehenderit.</p>
+    </div> 
+
+    <div> Do you use organic ingredients? <span class="fa fa-plus"> </span>
+    <hr class="active">
+    <p class="active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus
+    quaerat, magni numquam repellat reprehenderit.</p>
+    </div> 
+
+    <script>
+        let fa = document.getElementsByClassName("fa");
+        let hr = document.getElementsByTagName("hr");
+        let div = document.getElementsByTagName("div");
+        let p = document.getElementsByTagName("p");
+        for(let i=0; i<fa.length; i++){
+            fa[i].addEventListener("mouseover", function(){
+                fa[i].setAttribute('style', 'transform: rotate(90deg); transition: transform 0.5s;')
+            })
+            fa[i].addEventListener("mouseout", function () {
+                fa[i].setAttribute('style', 'transform: rotate(0deg); transition: transform 0.5s;')
+            })
+
+            fa[i].addEventListener("click", function(e){
+                div[i].classList.toggle("height");
+                fa[i].classList.toggle("fa-minus");
+                hr[i].classList.toggle("active");
+                p[i].classList.toggle("active");
+            })
+            
+        }
+        
+    </script>
+
+</body>
+</html>

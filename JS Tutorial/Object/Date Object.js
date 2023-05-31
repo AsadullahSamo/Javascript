@@ -9,7 +9,7 @@ format.setMonth(2);
 console.log(format);
 
 
-// Question:  What will be day after 50 days
+// Question:  What will be date after 50 days
 format.setDate(format.getDate() + 50);
 console.log("Date after 50 days: "+format);
 

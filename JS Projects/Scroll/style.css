@@ -1,0 +1,159 @@
+@keyframes animate {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: auto;
+  }
+}
+@font-face {
+  font-family: robotto;
+  src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: sans;
+  src: url("fonts/OpenSans-Medium.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: url("img/mountain.jpg") no-repeat;
+  background-size: cover;
+  background-position: 15% 15%;
+  overflow-x: hidden;
+  margin: 0;
+}
+h1 {
+  font-family: robotto;
+  font-size: 64px;
+  color: white;
+  text-align: center;
+  margin-top: 180px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+p {
+  color: white;
+  font-size: 16px;
+  font-family: sans;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+img {
+  width: 5%;
+  height: 5%;
+}
+button {
+  /* margin-left: auto; */
+  font-family: sans;
+  letter-spacing: 4px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 8px 15px;
+  position: relative;
+  top: 40px;
+  left: 40%;
+}
+button:hover {
+  background-color: white;
+  color: #49a6e9;
+  cursor: pointer;
+  transition: all 1s;
+}
+img {
+  position: fixed;
+  top: -12px;
+  height: 80px;
+  min-width: 65px;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  position: relative;
+  left: 8%;
+  cursor: pointer;
+  background-color: transparent;
+}
+header nav ul li:last-child {
+  margin-right: 60px;
+}
+header nav ul li {
+  padding: 15px 30px;
+  font-size: 19px;
+  color: white;
+  font-family: sans;
+  font-weight: bold;
+}
+section {
+  background-color: #f1f5f8;
+  width: auto;
+  height: 660px;
+}
+
+section h1 {
+  color: #102a42;
+  font-size: 40px;
+}
+section h1 span.second-word {
+  color: #40dfc4;
+}
+section.pos {
+  margin-top: -185px;
+}
+.fa-bars {
+  display: none;
+  color: white;
+}
+.sticky {
+  background-color: white;
+  position: fixed;
+  top: -20px;
+  width: 100%;
+}
+.active {
+  display: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+.fa-bars:hover {
+  cursor: pointer;
+  color: #40dfc4;
+  transition: color 0.5;
+}
+@media screen and (max-width: 794px) {
+  header nav ul {
+    flex-direction: column;
+    margin-left: -5rem;
+  }
+  header nav ul li a {
+    color: white;
+  }
+  header nav ul li a:hover {
+    color: #40dfc4;
+    transition: all 1s;
+  }
+  .fa-bars {
+    color: #102a42;
+    direction: rtl;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    display: block;
+    font-size: 25px;
+    color: black;
+  }
+  button {
+    left: 35%;
+  }
+}

@@ -10,9 +10,13 @@
             font-family: robotto;
             src: url('./fonts/Roboto-Regular.ttf');
         }
+        @font-face {
+            font-family: sans;
+            src: url('fonts/OpenSans-Medium.ttf');
+        }
         body{
             background-color: #f1f5f8;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         ul{
             list-style-type: none;
@@ -21,18 +25,18 @@
             align-items: center;
             flex-direction: column;
         }
-        ul li{
-            padding-top: 50px;
+        ul li h1{
+            padding-top: 0px;
             letter-spacing: 4px;
             font-family: robotto;
             font-weight: bold;
-            font-size: 40px;
+            font-size: 30px;
         }
         ul li div.container{
             background-color: white;
             width: 680px;
             border-radius: 7px;
-            height: 420px;
+            height: 480px;
         }
         #rev{
             border-bottom: 4px solid #49a6e9;
@@ -40,28 +44,138 @@
         img{
             position: relative;
             top: 10%;
-            left: 35%;
+            left: 38%;
             margin: auto;
             height: 190px;
             width: 160px;
             border-radius: 50%;
             box-shadow: 10px -3px 2px #49a6e9;
         }
-        
+        h3, h5{
+            position: relative;
+            top: 40px;
+            text-align: center;
+            font-family: robotto;
+        }
+        h3{
+            letter-spacing: 3px;
+        }
+        h5{
+            top: 22px;
+            color: #72a6ea;
+        }
+        p{
+            padding-top: 20px;
+            font-family: sans;
+            color: #617d98;
+            text-align: center;
+        }
+        #symbols{
+            margin-top: -30px;
+            color: #8bcbf9;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #symbols:hover{
+            cursor: pointer;
+        }
+        button{
+            position: relative;
+            left: 43.5%;
+            color: #49a6e9;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            border-radius: 6px;
+            border: 2px solid #49a6e9;
+            background-color: #ebf7ff;
+            padding: 6px 10px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: #49a6e9;
+            color: black;
+            text-decoration: underline;
+            transition: all 1s;
+        }
+        #quotes{
+            width: 50px;
+            height: 50px;
+            color: red;
+            border-radius: 50%;
+            font-size: 250px;
+        }
+        @media screen and (max-width: 700px) {
+            body{
+                overflow-x: visible;
+            }
+            ul li div.container{
+                height: 550px;
+            }
+            p{
+                text-align: center;
+                width: 65%;
+                margin: auto;
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+            img{
+                top: 5%;
+            }
+        }
     </style>
 </head>
 <body>
     
     
         <ul>
-            <li> Our <span id="rev"> Rev</span>iews</li>
+            <li> <h1>Our <span id="rev"> Rev</span>iews</h1></li>
             <li>
                 <div class="container">
-                    <img src="img/p3.jpg" alt="person-4">
+                    <img src="img/p3.jpg" alt="person-4" id="img">
+                    <h3 id="name"> Susan Smith</h5>
+                    <h5 id="profession"> WEB DEVELOPER </h6>
+                    <p>I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman
+                    humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry</p>
+                    <p id="symbols"> <span id="left-arrow">&#10094;</span> &nbsp;&nbsp;&nbsp; <span id="right-arrow">&#10095;</span></p>
+                    <button id="btn"> Surprise Me </button>
                 </div>
             </li>
+            
         </ul>
     
+
+        <script>
+            let professions = ["WEB DESIGNER", "INTERN", "THE BOSS", "WEB DEVELOPER"];
+            let names = ["Anna Johnson", "Peter Jones", "Bill Anderson", "Susan Smith"];
+            
+            document.getElementById("btn").addEventListener("click", function(){
+                let index = Math.floor(Math.random() * 4);
+                document.getElementById("img").src = 'img/p' + index + '.jpg';
+                document.getElementById("name").innerHTML = names[index];
+                document.getElementById("profession").innerHTML = professions[index];
+            })
+
+            let count = 0;
+            document.getElementById("left-arrow").addEventListener("click", function () {
+                count--;
+                if (count === -1) {
+                    count = 3;
+                }
+                document.getElementById("img").src = 'img/p' + count + '.jpg';
+                document.getElementById("name").innerHTML = names[count];
+                document.getElementById("profession").innerHTML = professions[count];
+            });
+
+            document.getElementById("right-arrow").addEventListener("click", function () {
+                count++;
+                if (count === 4) {
+                    count = 0;
+                }
+                document.getElementById("img").src = 'img/p' + count + '.jpg';
+                document.getElementById("name").innerHTML = names[count];
+                document.getElementById("profession").innerHTML = professions[count];
+            });
+        </script>
     
     
 

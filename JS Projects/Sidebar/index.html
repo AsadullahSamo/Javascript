@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="Sidebar Project">
+    <title> Sidebar </title>
+    
+    <style>
+        @font-face {
+            font-family: robotto;
+            src: url('fonts/Roboto-Regular.ttf');
+        }
+        @font-face {
+            font-family: sans;
+            src: url('fonts/OpenSans-Medium.ttf');
+        }
+        body{
+            background-color: #f1f5f8;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+        }
+        ul li{
+            display: flex;
+            justify-content: end;
+            padding-top: 6px;
+        }
+        ul li div{
+            padding: 2px;
+            border-radius: 4px;
+            width: 2rem;
+            height: 2px;
+            background-color: #49a6e9;
+            margin-right: 30px;
+        }
+        ul:hover{
+            cursor: pointer;
+        }
+        h1{
+            font-family: robotto;
+            letter-spacing: 4px;
+            font-size: 23px;
+            display: inline-block;
+            margin: 15px;
+        }
+        #addict{
+            color: #49a6e9;
+        }
+        .fa-close{
+            color: brown;
+            float: right;
+            margin: 15px 15px;
+            font-size: 30px;
+        }
+        .fa-close:hover{
+            transform: rotate(360deg);
+            transition: transform 0.7s;
+        }
+        div.container{
+            position: relative;
+            left: -100%;
+            background-color: white;
+            height: 41rem;
+            width: 30rem;
+            margin: 0;
+            margin-top: -4.2rem;
+        }
+        div.container ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;     
+        }
+        div.container ul + ul{
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            font-family: sans;
+            font-size: 22px;
+            color: #617d98;
+        }
+        div.container ul + ul li{
+            padding: 15px;
+        }
+        div.container ul + ul li:hover{
+            background-color: #49a6e9;
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+        div.container ul + ul + ul{
+            position: relative;
+            top: 15rem;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: end;
+            color: #3993d3;
+        }
+        div.container ul + ul + ul li:hover{
+            background-color: transparent;
+            margin-left: 0;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+        <ul id="menu">
+            <li> <div> </div></li>
+            <li> <div></div> </li>
+            <li> <div></div></li>
+        </ul>
+
+        <div class="container" id="sidebar">
+            <ul>
+                <li><h1> Coding <span id="addict">Addict</span></h1></li>
+                <li id="close"><i class="fa fa-close"></i></li>
+            </ul>
+            
+                <ul>
+                    <li>Home</li>
+                    <li>About </li>
+                    <li>Projects</li>
+                    <li>Contacts</li>
+                </ul>
+
+                <ul>
+                    <li> <i class="fa fa-twitter"></i> </li>
+                    <li> <i class="fa fa-facebook"></i> </li>
+                    <li> <i class="fa fa-instagram"></i> </li>
+                    <li> <i class="fa fa-youtube"></i></li>
+                </ul>
+        </div>
+
+        <script>
+            let container = document.getElementById("sidebar");
+            document.getElementById("menu").addEventListener("click", function(){
+                container.style.left = '0%';
+                container.style.transition = 'left 1s';
+            })
+            document.getElementById("close").addEventListener("click", function () {
+                    container.style.left = '-100%';
+                    container.style.transition = 'left 1s';
+            })
+        </script>
+
+</body>
+</html>

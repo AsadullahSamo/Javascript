@@ -1,49 +1,47 @@
-@keyframes animate {
-    from{
-        top: 0vh;
-    }
-     to{
-        top: 50vh;
-     }
+body {
+  background-image: url("img/forest.jpg");
 }
 
-body{
-    background-image: url('img/forest.jpg');
+button {
+  position: relative;
+  font-size: 16px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+  height: 35px;
+  top: 350px;
+  left: 100px;
 }
 
-button{
-    position: relative;
-    font-size: 16px;
-    border: 1px solid white;
-    border-radius: 3px;
-    background-color: transparent;
-    color: white;
-    height: 35px;
-    top: 350px;
-    left: 100px;
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 1.5s;
 }
 
-button:hover{
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    transition-property: all;
-    transition-duration: 1.5s;
+#text {
+  background-color: white;
+  width: 12%;
+  text-align: center;
+  height: 45px;
+  font-size: 17px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  position: absolute;
+  left: 40vw;
+  top: 50vh;
 }
 
-#text{
-    background-color: white;
-    width: 12%;
-    text-align: center;
-    height: 45px;
-    display: none;
-    font-size: 17px;
-    padding-top: 1px;
-    padding-bottom: 2px;
-    position: absolute;
-    left: 40vw;
-    animation-name: animate;
-    animation-duration: 0.6s;
-    top: 50vh;
+#close:hover {
+  cursor: pointer;
 }
-
+@media screen and (max-width: 800px) {
+  #text {
+    left: 75%;
+    height: 60px;
+    width: 18%;
+  }
+}

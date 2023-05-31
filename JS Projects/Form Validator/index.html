@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,27 +85,31 @@
         let userMsg = document.getElementById("userMsg")
         let passMsg = document.getElementById("passMsg")
         
-        document.getElementById("s").addEventListener("submit", function(){
-            if(username.value.length === 0 && pass.value.length === 0){
-                userMsg.style.display = 'block';
-                passMsg.style.display = 'block';
-                return false;
-            } else if(username.value.length === 0){
-                userMsg.style.display = 'block';
-                return false;
-            } else if(pass.value.length === 0){
-                passMsg.style.display = 'block';
-                return false;
-            } else if(username.value.length < 3){
-                userMsg.innerHTML = 'Username requires min 3 characters'
-                userMsg.style.display = 'block';
-                return false;
-            } else {
-                return true
-            }
-            console.log("Form is submitted")
-        })
+        document.getElementById("s").addEventListener("click", validateForm)
         
+        function validateForm(){
+                if (username.value.length === 0 && pass.value.length === 0) {
+                    userMsg.style.display = 'block';
+                    passMsg.style.display = 'block';
+                    return false;
+                } else if (username.value.length === 0) {
+                    userMsg.style.display = 'block';
+                    passMsg.style.display = 'none';
+                    return false;
+                } else if (pass.value.length === 0) {
+                    passMsg.style.display = 'block';
+                    userMsg.style.display = 'none';
+                    return false;
+                } else if (username.value.length < 3) {
+                    userMsg.innerHTML = 'Username requires min 3 characters'
+                    userMsg.style.display = 'block';
+                    return false;
+                } else {
+                    userMsg.style.display = 'none';
+                    passMsg.style.display = 'none';
+                    return true;
+                }
+        }
 
     </script>
 
