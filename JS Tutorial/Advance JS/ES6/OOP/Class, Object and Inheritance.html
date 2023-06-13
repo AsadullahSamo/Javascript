@@ -21,8 +21,12 @@
 
             sayHi(){           // Methods will attach in Prototype automatically
                 console.log("Hi!");
+                this.sayBye();
             }
 
+            sayBye(){
+                console.log("Bye!")
+            }
             // static method
             static hello(){        // called with class
                 console.log("Hello, World!");

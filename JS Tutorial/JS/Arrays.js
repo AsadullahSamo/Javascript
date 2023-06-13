@@ -88,6 +88,9 @@ let newArray = books.concat(books2, books3);
 console.log(newArray);
 
 
+// 12. toSpliced(), toReversed(), toSorted()      are methods to do same thing (splicing, reversing sorting) without mutating original array
+// 13. arr.with(index, newElement)     --> To replace an element in array without mutating
+
 // Multidimensional Array
 // useful in situations like if we want to get book with pages 
 let bookWithPages = [

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="content" description="This page is about Comfy Project from my Front End JS Projects">
+    <meta name="theme-color">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">    
+    <title> SOFA SET | Comfy </title>
+</head>
+
+<body>
+            <section class="bg-white w-full h-[100px]" id="nav-1">
+                <div class="flex justify-end sidebar">
+                    <div class="bg-[#f1f5f8] h-[100%] w-[400px] fixed overflow-auto hidden items">
+                        <li class="text-[24px] list-none"> <i
+                                class="text-[#617d98] text-3xl fa fa-close mx-3 my-3 hover:cursor-pointer"></i></li>
+                        <h1 class="text-[#102a42] text-2xl text-center font-['Kaushan']"> Your Blog </h1>
+            
+                        <ul class="flex gap-4 mt-4 ml-4"> </ul>
+            
+                        <footer class="flex flex-col self-end translate-y-80">
+                            <h1 class="text-[#102a42] text-[28px] text-center font-['Kaushan'] mb-5" id="total-price"> Total: $0.00
+                            </h1>
+                            <button id="checkout"
+                                class="mx-auto bg-[#ba5d2c] text-[#102a42] text-[16px] mb-16 px-9 py-1 border-[1px] border-solid border-white rounded-md hover:text-[#102a42] hover:opacity-90 hover:transition-all hover:duration-1000 checkout">
+                                CHECKOUT </button>
+                        </footer>
+                    </div>
+                </div>
+            
+                <ul class="py-7 mr-5 w-[60%] md:flex hidden">
+                    <li
+                        class="font text-[#102a42] text-xl ml-20 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li
+                        class="font text-[#102a42] text-xl ml-10 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer">
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li
+                        class="font text-[#102a42] text-xl ml-10 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li
+                        class="font text-[#102a42] text-5xl sm:ml-[15%] md:ml-[21%] lg:ml-[30%] -mt-4 font-['Kaushan'] tracking-wider">
+                        comfy</li>
+                </ul>
+            
+                <ul class="md:flex hidden justify-end -mt-14">
+                    <li class="mr-10 -mt-4">
+                        <i class="fa fa-cart-shopping text-[#102a42] text-3xl hover:cursor-pointer cart cart-1">
+                            <div class="w-6 h-6 rounded-[50%] bg-[#ba5d2c] ml-4 -mt-11 animate-pulse">
+                                <p class="text-white font-extrabold text-center text-sm items-in-cart">0</p>
+                            </div>
+                        </i>
+                    </li>
+                </ul>
+            
+                <ul class="md:hidden flex py-9 justify-between">
+                    <li
+                        class="hover:cursor-pointer fa fa-bars text-2xl text-white ml-10 bg-[#ba5d2c] px-5 py-[2px] rounded-full menu">
+                    </li>
+                    <li class="font text-[#102a42] text-5xl -mt-4 font-['Kaushan'] tracking-wider">comfy</li>
+                    <li class="font text-red-500 text-3xl mr-10 -mt-5">
+                        <i class="hover:cursor-pointer fa fa-cart-shopping text-[#102a42] text-3xl cart cart-2">
+                            <div class="w-6 h-6 rounded-[50%] bg-[#ba5d2c] ml-3 -mt-10 animate-bounce">
+                                <p class="text-white font-extrabold text-center text-sm items-in-cart">0</p>
+                            </div>
+                        </i>
+                    </li>
+                </ul>
+            </section>
+            
+            
+            <section class="hidden bg-slate-200 h-[30rem] w-[85%] -mt-[5rem] mx-auto rounded-md blur-none hidden-nav">
+                <nav>
+                    <ul class="flex justify-end">
+                        <li class="text-[24px]"> <i class="text-[#617d98] text-3xl fa fa-close mx-3 my-6 hover:cursor-pointer"></i>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col ml-[4rem]">
+                        <li class="text-[24px] mb-4 hover:cursor-pointer"> <i
+                                class="-ml-[10%] text-[#617d98] fa fa-house-chimney mr-3"></i> <a href="index.html"
+                                class="hover:opacity-75">Home</a> </li>
+                        <li class="text-[24px] mb-4 hover:cursor-pointer"> <i class="text-[#617d98] fa fa-couch mr-3"></i> <a
+                                href="products.html" class="hover:opacity-75">Products</a> </li>
+                        <li class="text-[24px] mb-4 ml-1 hover:cursor-pointer"> <i class="text-[#617d98] fa fa-book mr-5"></i><a
+                                href="about.html" class="hover:opacity-75">About Us</a> </li>
+                    </ul>
+                </nav>
+            </section>
+            
+            
+            <section class=" w-[100%] h-[10rem] bg-[#f1f5f8] tracking-wider" id="hide">
+                <h1 class="font-medium py-12 px-24 text-[28px] text-[#617d98]"> Home / Sofa Set </h1>
+            </section>
+
+            <section class="my-16">
+                <ul class="flex">
+                    <li class="ml-24"> <img src="img/product-6.jpeg" alt="Sofa Set" class="rounded-md w-[550px] h-[450px] object-cover image"> </li>
+                    <li class="-ml-40 -mt-3">
+                        <ul class="flex">
+                            <li> 
+                                <h1 class="text-[40px] text-[#102a42] nameOfItem ml-52"> Sofa Set </h1> 
+                                <h1 class="text-[19px] text-[#BCCCDC] font-[Kaushan] tracking-wider name ml-52"> BY LIDDLY </h1>
+                                <h1 class="text-[20px] text-[#324D67] font-['Segoe UI'] font-medium tracking-wider mt-5 ml-52" id="price"> $69.99 </h1>
+                                <p class="mt-12 text-[12px] text-lg text-[#617D98] w-[440px] ml-52">Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher
+                                waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo
+                                everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge</p>
+                                <button
+                                    class="ml-52 btn mt-12 bg-[#ba5d2c] text-white text-[16px] mb-16 px-6 py-1 border-[1px] border-solid border-white rounded-md hover:text-black hover:bg-amber-700 hover:transition-all hover:duration-1000" id="add-to-cart">
+                                    ADD TO CART </button></li>
+                            </li>
+                      <li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+</body>
+
+    <script src="js/product.js" type="module"></script>
+    <script src="js/products.js" type="module"></script>
+</html>

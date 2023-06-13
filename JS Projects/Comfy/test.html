@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        .imageUl{
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="bg-[url('img/home.jpg')] w-full h-[736px]">
+    
+    
+        <div class="flex justify-end sidebar">
+            <div class="bg-[#f1f5f8] h-[100%] w-[400px] fixed overflow-auto hidden items">
+                <li class="text-[24px] list-none"> <i
+                        class="text-[#617d98] text-3xl fa fa-close mx-3 my-3 hover:cursor-pointer"></i></li>
+                <h1 class="text-[#102a42] text-2xl text-center font-['Kaushan']"> Your Blog </h1>
+    
+                <ul class="flex gap-4 mt-4 ml-4"> </ul>
+                <ul class="flex gap-4 mt-4 ml-4 imageUl">
+                    <li class="mr-5"><img src=${imgSrc} alt="Product 1" class="h-16 w-24 object-cover float-right rounded-md"></li>
+                    <li>
+                        <p class="tracking-wide w-56 -mt-[6px]"> ${itemName} </p>
+                        <div class="flex flex-col items-center -mt-6 ml-52">
+                            <i class="text-[#ba5d2c] fa fa-angle-up mt-1"></i>
+                            <span class="num text-[16px] text-center quantity">${quantity}</span>
+                            <i class="text-[#ba5d2c] fa fa-angle-down"></i>
+                        </div>
+                        <p class="text-[12px] text-[#324d67] -mt-9"> ${price} </p>
+                        <p class="w-68 tracking-wider hover:cursor-pointer text-[#617d98] remove mt-1"> remove </p>
+                    </li>
+                </ul>
+    
+                <footer class="flex flex-col self-end translate-y-80">
+                    <h1 class="text-[#102a42] text-[28px] text-center font-['Kaushan'] mb-5" id="total-price"> Total: $0.00
+                    </h1>
+                    <button id="checkout"
+                        class="mx-auto bg-[#ba5d2c] text-[#102a42] text-[16px] mb-16 px-9 py-1 border-[1px] border-solid border-white rounded-md hover:text-[#102a42] hover:opacity-90 hover:transition-all hover:duration-1000 checkout">
+                        CHECKOUT </button>
+                </footer>
+            </div>
+        </div>
+</section>
+
+
+        <script>
+            let imageUl = document.getElementsByClassName("imageUl");
+            
+            imageUl[0].parentNode.removeChild(imageUl[0])
+        </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  src: url("fonts/KaushanScript-Regular.ttf");
+  font-family: Kaushan;
+}
+
+ul {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@media screen and (max-width: 768px) {
+  section ul:nth-child(2) li:nth-child(1) {
+    margin-left: 10%;
+  }
+  /* #nav-1 {
+    height: 100px;
+  } */
+  #fix ul {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #hidden-nav {
+    display: none;
+  }
+}
+
+section figure img:hover ~ div div.search-icon,
+section figure img:hover ~ div div.cart-icon,
+.search-icon:hover,
+.cart-icon:hover {
+  visibility: visible;
+}

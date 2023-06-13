@@ -4,37 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Grocery Bud</title>
-    <style>
-        h1{
-            font-family: robotto;
-            font-size: 28px;
-            letter-spacing: 4px;
-            color: #063251;            
-        }
-        p{
-            color: #102a42;
-            letter-spacing: 2px;
-            font-family: sans-light;
-        }
-        #clear-items, #submit{
-            color: #e66b6b;
-            letter-spacing: 2px;
-            font-size: 23px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #submit{
-            color: black;
-        }
-        #eg{
-            color: #757d9e;
-        }
-        #btn{
-            background-color: #a5d5f8;
-        }
-    </style>
+    
 </head>
 <body>
     
+    <div class="container">
+        
+        <div class="cont">
+            <p id="hidden-content"> Please Enter Value </p>
+            <h1> Grocery Bud </h1> 
+        </div>
+
+        <div class="ff">
+        <label for="items"></label>
+        <input type="text" name="items" id="items" placeholder="e.g. eggs">
+        <button id="submit"> Submit </button>
+        </div>
+        
+        <div id="para">
+            <!-- <p> Cheese <i class="fa fa-pen-to-square"></i> <i class="fa fa-trash"></i></p> -->
+        </div>
+        <div id="clear-items"> Clear Items </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
 </body>
 </html>

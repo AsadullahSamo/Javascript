@@ -1,0 +1,128 @@
+@font-face {
+  font-family: robotto;
+  src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: sans-light;
+  src: url("fonts/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: sans-regular;
+  src: url("fonts/OpenSans-Regular.ttf");
+}
+body {
+  box-sizing: border-box;
+  background-color: #f1f5f8;
+}
+div.container {
+  margin: 4rem auto;
+  border-radius: 7px;
+  background-color: white;
+  width: 40rem;
+  height: 500px;
+}
+h1 {
+  text-align: center;
+  padding-top: 70px;
+  font-family: robotto;
+  font-size: 28px;
+  letter-spacing: 4px;
+  color: #063251;
+}
+#clear-items,
+#submit {
+  color: #e66b6b;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#clear-items {
+  letter-spacing: 4px;
+  text-align: center;
+  display: none;
+}
+#clear-items:hover {
+  cursor: pointer;
+}
+
+div.ff {
+  display: flex;
+}
+
+input[type="text"] {
+  display: inline-block;
+  border: none;
+  background-color: #f1f5f8;
+  padding: 4px 15px;
+  font-size: 15px;
+  border-radius: 7px;
+  width: 80%;
+  margin: 0 3rem 1rem;
+  color: #757d9e;
+}
+#submit {
+  color: black;
+  border: none;
+  border-radius: 0 7px 7px 0;
+  margin-left: -9rem;
+  height: 24px;
+  width: 15%;
+  background-color: #a5d5f8;
+  padding: 4px 15px;
+}
+#submit:hover {
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 1s;
+}
+p {
+  border-radius: 7px;
+  padding: 7px 7px;
+  width: 85%;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  color: #102a42;
+  letter-spacing: 2px;
+  font-family: sans-regular;
+}
+p:hover {
+  background-color: #f1f5f8;
+  cursor: pointer;
+}
+.fa-pen-to-square {
+  margin-right: 2rem;
+  float: right;
+  color: #6be675;
+}
+.fa-trash {
+  float: right;
+  color: #e66b6b;
+  margin-right: -3rem;
+}
+
+.fa-trash:hover {
+  color: #f53b3b;
+}
+.fa-pen-to-square:hover {
+  color: #20cf2f;
+}
+.fa-pen-to-square:hover,
+.fa-trash:hover {
+  cursor: pointer;
+  transition: all 1s;
+}
+
+div.cont {
+  display: flex;
+  flex-direction: column;
+}
+#hidden-content {
+  display: none;
+  font-size: 12px;
+  text-align: center;
+  background-color: #f0a0a0;
+  letter-spacing: 3px;
+  padding: 2px 2px;
+  margin: 2rem auto -5rem;
+}

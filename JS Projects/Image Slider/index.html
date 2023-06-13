@@ -51,26 +51,25 @@
         let leftCircle = document.getElementById("left-circle")
         let rightCircle = document.getElementById("right-circle")
         
-        let i = 1;
+        
         let img1 = document.getElementById("image"); 
         
+        let count = 0;
         leftCircle.addEventListener("click", function(){            
-            if(i=== 0){
-                i = 3;
-                img1.setAttribute('src', arrayOfSrc[0]);           
+            if(count=== 0){
+                count = 0
             } else {
-                img1.setAttribute('src', arrayOfSrc[i]);           
-                i--;
+                count--;
             }
+            img1.setAttribute('src', arrayOfSrc[count]);           
         })
         rightCircle.addEventListener("click", function(){
-            if(i===3){
-                i = 0;
-                img1.setAttribute('src', arrayOfSrc[3]);           
+            if(count===3){
+                count = 3;
             } else {
-                img1.setAttribute('src', arrayOfSrc[i]);           
-                i++;
+                count++;
             }
+            img1.setAttribute('src', arrayOfSrc[count]);           
         })
 
 

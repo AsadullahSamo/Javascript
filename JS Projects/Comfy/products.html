@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="content" description="This page is about Comfy Project from my Front End JS Projects">
+    <meta name="theme-color">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title> Products | Comfy </title>
+</head>
+
+<body>
+
+        <section class="bg-white w-full h-[100px]" id="blog">        
+            <div class="flex justify-end sidebar">
+                <div class="bg-[#f1f5f8] h-[100%] w-[400px] fixed overflow-auto hidden items">
+                    <li class="text-[24px] list-none"> <i class="text-[#617d98] text-3xl fa fa-close mx-3 my-3 hover:cursor-pointer"></i></li>
+                    <h1 class="text-[#102a42] text-2xl text-center font-['Kaushan']"> Your Blog </h1>
+        
+                    <ul class="flex gap-4 mt-4 ml-4"> </ul>
+                    
+                    <footer class="flex flex-col self-end translate-y-80">
+                        <h1 class="text-[#102a42] text-[28px] text-center font-['Kaushan'] mb-5" id="total-price"> Total: $0.00 </h1>
+                        <button id="checkout" 
+                            class="mx-auto bg-[#ba5d2c] text-[#102a42] text-[16px] mb-16 px-9 py-1 border-[1px] border-solid border-white rounded-md hover:text-[#102a42] hover:opacity-90 hover:transition-all hover:duration-1000 checkout">
+                            CHECKOUT </button>
+                    </footer>
+                </div>
+            </div>
+        
+            <ul class="py-7 mr-5 w-[60%] md:flex hidden">
+                <li
+                    class="font text-[#102a42] text-xl ml-20 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer">
+                    <a href="index.html">Home</a></li>
+                <li
+                    class="font text-[#102a42] text-xl ml-10 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer">
+                    <a href="products.html">Products</a></li>
+                <li
+                    class="font text-[#102a42] text-xl ml-10 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer">
+                    <a href="about.html">About</a></li>
+                <li class="font text-[#102a42] text-5xl sm:ml-[15%] md:ml-[21%] lg:ml-[30%] -mt-4 font-['Kaushan'] tracking-wider">
+                    comfy</li>
+            </ul>
+        
+            <ul class="md:flex hidden justify-end -mt-14">
+                <li class="mr-10 -mt-4">
+                    <i class="fa fa-cart-shopping text-[#102a42] text-3xl hover:cursor-pointer cart cart-1">
+                        <div class="w-6 h-6 rounded-[50%] bg-[#ba5d2c] ml-4 -mt-11 animate-pulse">
+                            <p class="text-white font-extrabold text-center text-sm items-in-cart">0</p>
+                        </div>
+                    </i>
+                </li>
+            </ul>
+        
+            <ul class="md:hidden flex py-9 justify-between">
+                <li
+                    class="hover:cursor-pointer fa fa-bars text-2xl text-white ml-10 bg-[#ba5d2c] px-5 py-[2px] rounded-full menu">
+                </li>
+                <li class="font text-[#102a42] text-5xl -mt-4 font-['Kaushan'] tracking-wider">comfy</li>
+                <li class="font text-red-500 text-3xl mr-10 -mt-5">
+                    <i class="hover:cursor-pointer fa fa-cart-shopping text-[#102a42] text-3xl cart cart-2">
+                        <div class="w-6 h-6 rounded-[50%] bg-[#ba5d2c] ml-3 -mt-10 animate-bounce">
+                            <p class="text-white font-extrabold text-center text-sm items-in-cart">0</p>
+                        </div>
+                    </i>
+                </li>
+            </ul>
+        </section>
+
+    
+        <section class="hidden bg-slate-200 h-[30rem] w-[85%] -mt-[5rem] mx-auto rounded-md blur-none hidden-nav">
+            <nav>
+                <ul class="flex justify-end">
+                    <li class="text-[24px]"> <i class="text-[#617d98] text-3xl fa fa-close mx-3 my-6 hover:cursor-pointer"></i>
+                    </li>
+                </ul>
+                <ul class="flex flex-col ml-[4rem]">
+                    <li class="text-[24px] mb-4 hover:cursor-pointer"> <i
+                            class="-ml-[10%] text-[#617d98] fa fa-house-chimney mr-3"></i> <a href="index.html"
+                            class="hover:opacity-75">Home</a> </li>
+                    <li class="text-[24px] mb-4 hover:cursor-pointer"> <i class="text-[#617d98] fa fa-couch mr-3"></i> <a
+                            href="products.html" class="hover:opacity-75">Products</a> </li>
+                    <li class="text-[24px] mb-4 ml-1 hover:cursor-pointer"> <i class="text-[#617d98] fa fa-book mr-5"></i><a
+                            href="about.html" class="hover:opacity-75">About Us</a> </li>
+                </ul>
+            </nav>
+        </section>
+
+
+        <section class=" w-[100%] h-[10rem] bg-[#f1f5f8] tracking-wider" id="hide">
+            <h1 class="font-medium py-12 px-24 text-[28px] text-[#617d98]"> Home / Products </h1>
+        </section>
+
+    
+
+
+        <section class="h-[10vh] w-[220px] bg-white" id="fix">
+            <ul class="flex flex-col p-16">
+                <li class="font-medium text-[16px] text-[#102a42] tracking-widest">Company</li>
+                <li class="mt-2 text-[13px] text-[#617d98] hover:cursor-pointer hover:text-[#102a42] tracking-wider"> <a id="all">All</a> </li>
+                <li class="mt-2 text-[13px] text-[#617d98] hover:cursor-pointer hover:text-[#102a42] tracking-wider"> <a id="ikea">Ikea</a> </li>
+                <li class="mt-2 text-[13px] text-[#617d98] hover:cursor-pointer hover:text-[#102a42] tracking-wider"> <a id="marcos">Marcos</a> </li>
+                <li class="mt-2 text-[13px] text-[#617d98] hover:cursor-pointer hover:text-[#102a42] tracking-wider"> <a id="caressa">Caressa</a> </li>
+                <li class="mt-2 text-[13px] text-[#617d98] hover:cursor-pointer hover:text-[#102a42] tracking-wider"> <a id="liddly">Liddly</a> </li>
+                <li class="font-medium text-[16px] text-[#102a42] mt-5 tracking-widest">Price</li>
+
+                <li>
+                    <form action="">
+                        <input type="range" name="meter" id="meter" min="0" max="80" value="80">
+                    </form>
+                </li>
+                <li class="text-[16px] text-[#617d98] tracking-widest">Value: $<span id="meterVal">80</span></li>
+            </ul>
+        </section>
+
+
+        <section class="images ml-52 h-auto w-auto bg-white flex justify-evenly gap-1 flex-wrap">
+            <figure>
+                <img src="img/product-1.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> High-Back Bench </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $9.99 </figcaption>
+
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img src="img/product-2.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Albany Table </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $79.99 </figcaption>
+                            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>       
+            </figure>
+
+            <figure>
+                <img src="img/product-3.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Accent Chair </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $25.99 </figcaption>
+            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img src="img/product-4.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Wooden Table </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $45.99 </figcaption>
+            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+                <figure>
+                <img src="img/product-5.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Dinning Table </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $6.99 </figcaption>
+
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img src="img/product-6.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Sofa Set </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $69.99 </figcaption>
+                            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>       
+            </figure>
+
+            <figure>
+                <img src="img/product-7.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Modern Bookshelf </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $8.99 </figcaption>
+            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img src="img/product-8.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Emperor Bed </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $21.99 </figcaption>
+            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+                <figure>
+                <img src="img/product-9.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Utopia Sofa </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $39.99 </figcaption>
+
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img src="img/product-10.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Entertainment Center </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $29.99 </figcaption>
+
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>       
+            </figure>
+
+            <figure>
+                <img src="img/product-11.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Albany Sectional </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $10.99 </figcaption>
+            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img src="img/product-12.jpeg" alt="Couch" class="page-images rounded-md w-[40rem] xl:w-80 h-48 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal item-name"> Leather Sofa </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold price"> $9.99 </figcaption>
+            
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center search-icon"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center cart-icon"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+        </section>
+       
+</body>
+
+<script src="js/products.js" type="module"></script>
+<script src="js/product.js" type="module"></script>
+
+</html>

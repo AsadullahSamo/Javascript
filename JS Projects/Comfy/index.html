@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="content" description="This page is about Comfy Project from my Front End JS Projects">
+    <meta name="theme-color">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title> Home | Comfy</title>
+    
+</head>
+
+
+<body>
+
+    <section class="bg-[url('img/home.jpg')] w-full h-[736px]" id="blog">
+        
+        
+            <div class="flex justify-end sidebar">
+                <div class="bg-[#f1f5f8] h-[100%] w-[400px] fixed overflow-auto hidden items">
+                    <li class="text-[24px] list-none"> <i
+                            class="text-[#617d98] text-3xl fa fa-close mx-3 my-3 hover:cursor-pointer"></i></li>
+                    <h1 class="text-[#102a42] text-2xl text-center font-['Kaushan']"> Your Blog </h1>
+            
+                    <ul class="flex gap-4 mt-4 ml-4"> </ul>
+            <!-- <ul class="flex gap-4 mt-4 ml-4">
+                <li class="mr-5"><img src=${imgSrc} alt="Product 1" class="h-16 w-24 object-cover float-right rounded-md"></li>
+                <li>
+                    <p class="tracking-wide w-56 -mt-[6px]"> ${itemName} </p>
+                    <div class="flex flex-col items-center -mt-6 ml-52">
+                        <i class="text-[#ba5d2c] fa fa-angle-up mt-1"></i>
+                        <span class="num text-[16px] text-center quantity">${quantity}</span>
+                        <i class="text-[#ba5d2c] fa fa-angle-down"></i>
+                    </div>
+                    <p class="text-[12px] text-[#324d67] -mt-9"> ${price} </p>
+                    <p class="w-68 tracking-wider hover:cursor-pointer text-[#617d98] remove mt-1"> remove </p>
+                </li>
+            </ul> -->
+
+                    <footer class="flex flex-col self-end translate-y-80">
+                        <h1 class="text-[#102a42] text-[28px] text-center font-['Kaushan'] mb-5" id="total-price"> Total: $0.00
+                        </h1>
+                        <button id="checkout"
+                          class="mx-auto bg-[#ba5d2c] text-[#102a42] text-[16px] mb-16 px-9 py-1 border-[1px] border-solid border-white rounded-md hover:text-[#102a42] hover:opacity-90 hover:transition-all hover:duration-1000 checkout">
+                            CHECKOUT </button>
+                    </footer>
+                </div>
+            </div>
+        
+
+        <ul class="py-7 mr-5 w-[60%] md:flex hidden">
+            <li class="font text-white text-xl ml-20 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer"><a href="/">Home</a></li>
+            <li class="font text-white text-xl ml-10 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer"><a href="products.html">Products</a></li>
+            <li class="font text-white text-xl ml-10 tracking-wider hover:text-[#ba5d2c] hover:duration-1000 hover:cursor-pointer"><a href="about.html">About</a></li>
+            <li class="font text-white text-5xl sm:ml-[15%] md:ml-[21%] lg:ml-[30%] -mt-4 font-['Kaushan'] tracking-wider">comfy</li>
+        </ul>
+
+        <ul class="md:flex hidden justify-end -mt-14">
+            <li class="mr-10 -mt-4">
+                <i class="fa fa-cart-shopping text-white text-3xl hover:cursor-pointer cart cart-1">
+                    <div class="w-6 h-6 rounded-[50%] bg-[#ba5d2c] ml-4 -mt-11 animate-pulse ">
+                        <p class="text-white font-extrabold text-center text-sm itemNum items-in-cart">0</p>
+                    </div>
+                </i>
+            </li>
+        </ul>
+
+        <ul class="md:hidden flex py-9 justify-between">
+            <li class="hover:cursor-pointer fa fa-bars text-2xl text-white ml-10 bg-[#ba5d2c] px-5 py-[2px] rounded-full menu"></li>
+            <li class="font text-white text-5xl -mt-4 font-['Kaushan'] tracking-wider">comfy</li>
+            <li class="font text-red-500 text-3xl mr-10 -mt-5">
+                <i class="hover:cursor-pointer fa fa-cart-shopping text-white text-3xl cart cart-2">
+                    <div class="w-6 h-6 rounded-[50%] bg-[#ba5d2c] ml-3 -mt-10 animate-bounce">
+                        <p class="text-white font-extrabold text-center text-sm itemNum items-in-cart">0</p>
+                    </div>
+                </i>
+            </li>
+        </ul>
+    
+
+        <h1 class="text-white text-[48px] sm:text-[48px] md:text-[64px] lg:text-8xl lg:mb-32 font-['Kaushan'] mt-36 mb-28 ml-16 font-semibold"> Rest, Relax, Unwind</h1>
+        <h1 class="text-white text-[24px] lg:text-5xl ml-16 -my-28 tracking-wide font-['Segoe UI']"> Embrace your choices - we do </h1>
+        <button class=" mx-[4.5rem] text-white text-[16px] mt-32 lg:mt-36 px-4 py-2 border-[1px] border-solid border-white rounded-md hover:text-[#ba5d2c] hover:bg-white hover:transition-all hover:duration-1000"> <a href="products.html">SHOW NOW</a> </button>
+
+    </section>
+
+    <section class="hidden bg-white h-[36rem] w-[85%] -mt-[45rem] mx-auto rounded-md blur-none hidden-nav">
+        <nav>
+            <ul class="flex justify-end">
+                <li class="text-[24px]"> <i class="text-[#617d98] text-3xl fa fa-close mx-3 my-6 hover:cursor-pointer"></i></li>
+            </ul>
+            <ul class="flex flex-col ml-[4rem]">
+                <li class="text-[24px] mb-4 hover:cursor-pointer"> <i class="-ml-[10%] text-[#617d98] fa fa-house-chimney mr-3"></i> <a href="index.html" class="hover:opacity-75">Home</a> </li>
+                <li class="text-[24px] mb-4 hover:cursor-pointer"> <i class="text-[#617d98] fa fa-couch mr-3"></i> <a href="products.html" class="hover:opacity-75">Products</a> </li>
+                <li class="text-[24px] mb-4 ml-1 hover:cursor-pointer"> <i class="text-[#617d98] fa fa-book mr-5"></i><a href="about.html" class="hover:opacity-75">About Us</a> </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <h1 class="mt-16 mb-12 font-medium text-center"> <span class="text-[#ba5d2c] text-[34px]">/</span> &nbsp;&nbsp; <span class="font-medium text-[#102a42] text-[40px]">Featured</span> </h1>
+        <div class="flex flex-col mx-4 lg:flex-row justify-center items-center gap-5 mb-11 flex-wrap">
+            <figure>
+                <img src="img/product-1.jpeg" alt="Couch" class="w-[40rem] xl:w-96 h-60 object-cover" id="img1">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal"> High-Back Bench </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold"> $9.99 </figcaption>
+
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center icons"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center icons"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+
+            </figure>
+            
+            <figure>
+                <img src="img/product-9.jpeg" alt="" class="w-[40rem] xl:w-96 h-60 object-cover">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal"> Utopia Sofia </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold"> $39.95 </figcaption>
+
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center icons"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center icons"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+            
+            <figure>
+                <img src="img/product-10.jpeg" alt="" class="object-cover w-[40rem] xl:w-96 h-60">
+                <figcaption class="text-center mt-2 text-[#617d98] font-normal"> Entertainment Center </figcaption>
+                <figcaption class="text-center text-[#324d67] font-bold"> $29.98 </figcaption>
+
+                <div class="flex justify-center gap-8">
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center icons"> <i class="py-3 fa fa-search text-white text-center"></i> </div>
+                    <div class="hover:cursor-pointer hover:bg-orange-500 invisible w-[38px] h-[38px] rounded-[50%] bg-[#ba5d2c] ml-3 relative -top-[200px] text-center icons"> <i class="py-3 fa fa-cart-shopping text-white text-center"></i> </div>
+                </div>
+            </figure>
+        </div>
+        <button class="ml-[35%] md:ml-[40%] lg:ml-[45%] bg-[#ba5d2c] text-white text-[16px] mb-16 px-6 py-1 border-[1px] border-solid border-white rounded-md hover:text-white hover:bg-amber-00 hover:transition-all hover:duration-1000"> <a href="products.html">ALL PRODUCTS</a> </button>
+    </section>
+    
+    <script src="js/script.js" type="module"></script>
+
+</body>
+</html>
